@@ -17,7 +17,7 @@
 		D2BC72A32C1DAD85001BC699 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D2BC72A22C1DAD85001BC699 /* FirebaseAuth */; };
 		D2BC72A52C1DAD85001BC699 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D2BC72A42C1DAD85001BC699 /* FirebaseFirestore */; };
 		D2BC72A72C1DAD85001BC699 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D2BC72A62C1DAD85001BC699 /* FirebaseFirestoreSwift */; };
-		D2BC72AE2C1DB205001BC699 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC72AD2C1DB205001BC699 /* ProfileView.swift */; };
+		D2BC72AE2C1DB205001BC699 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC72AD2C1DB205001BC699 /* SettingsView.swift */; };
 		D2BC72B02C1DB21D001BC699 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC72AF2C1DB21D001BC699 /* HomeView.swift */; };
 		D2BC72B22C1DB24C001BC699 /* AddYarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC72B12C1DB24C001BC699 /* AddYarnView.swift */; };
 		D2BC72B42C1DB25B001BC699 /* AddToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC72B32C1DB25A001BC699 /* AddToolView.swift */; };
@@ -30,7 +30,7 @@
 		D2BC72C22C1DB35A001BC699 /* ToolItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC72C12C1DB35A001BC699 /* ToolItem.swift */; };
 		D2BC72C42C1DB368001BC699 /* WishlistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC72C32C1DB368001BC699 /* WishlistItem.swift */; };
 		D2BC72C62C1DB3A8001BC699 /* MainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC72C52C1DB3A8001BC699 /* MainViewViewModel.swift */; };
-		D2BC72C82C1DB3B4001BC699 /* ProfileViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC72C72C1DB3B4001BC699 /* ProfileViewViewModel.swift */; };
+		D2BC72C82C1DB3B4001BC699 /* SettingsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC72C72C1DB3B4001BC699 /* SettingsViewViewModel.swift */; };
 		D2BC72CA2C1DB3C1001BC699 /* HomeViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC72C92C1DB3C1001BC699 /* HomeViewViewModel.swift */; };
 		D2BC72CC2C1DB3CC001BC699 /* AddYarnViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC72CB2C1DB3CC001BC699 /* AddYarnViewViewModel.swift */; };
 		D2BC72CE2C1DB3D9001BC699 /* AddToolViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC72CD2C1DB3D9001BC699 /* AddToolViewViewModel.swift */; };
@@ -47,11 +47,11 @@
 		D2B821B92C29BA52000E0E3A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D2BC728C2C1DAA62001BC699 /* YourYarn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourYarn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BC728F2C1DAA62001BC699 /* YourYarnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourYarnApp.swift; sourceTree = "<group>"; };
-		D2BC72912C1DAA62001BC699 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D2BC72912C1DAA62001BC699 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; usesTabs = 0; };
 		D2BC72932C1DAA64001BC699 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2BC72962C1DAA64001BC699 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D2BC729D2C1DACA3001BC699 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D2BC72AD2C1DB205001BC699 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D2BC72AD2C1DB205001BC699 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D2BC72AF2C1DB21D001BC699 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D2BC72B12C1DB24C001BC699 /* AddYarnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddYarnView.swift; sourceTree = "<group>"; };
 		D2BC72B32C1DB25A001BC699 /* AddToolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToolView.swift; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 		D2BC72C12C1DB35A001BC699 /* ToolItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolItem.swift; sourceTree = "<group>"; };
 		D2BC72C32C1DB368001BC699 /* WishlistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistItem.swift; sourceTree = "<group>"; };
 		D2BC72C52C1DB3A8001BC699 /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
-		D2BC72C72C1DB3B4001BC699 /* ProfileViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewViewModel.swift; sourceTree = "<group>"; };
+		D2BC72C72C1DB3B4001BC699 /* SettingsViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewViewModel.swift; sourceTree = "<group>"; };
 		D2BC72C92C1DB3C1001BC699 /* HomeViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewViewModel.swift; sourceTree = "<group>"; };
 		D2BC72CB2C1DB3CC001BC699 /* AddYarnViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddYarnViewViewModel.swift; sourceTree = "<group>"; };
 		D2BC72CD2C1DB3D9001BC699 /* AddToolViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToolViewViewModel.swift; sourceTree = "<group>"; };
@@ -137,10 +137,10 @@
 				D2BC72B92C1DB2AA001BC699 /* RegistrationView.swift */,
 				D2BC72DD2C1DDD65001BC699 /* ResetPasswordView.swift */,
 				D2BC72AF2C1DB21D001BC699 /* HomeView.swift */,
-				D2BC72AD2C1DB205001BC699 /* ProfileView.swift */,
 				D2BC72B12C1DB24C001BC699 /* AddYarnView.swift */,
 				D2BC72B32C1DB25A001BC699 /* AddToolView.swift */,
 				D2BC72B52C1DB26D001BC699 /* AddWishListView.swift */,
+				D2BC72AD2C1DB205001BC699 /* SettingsView.swift */,
 				D2BC72BB2C1DB2FE001BC699 /* WishlistItemView.swift */,
 				D2BC72D92C1DCCB7001BC699 /* BackgroundView.swift */,
 			);
@@ -153,7 +153,7 @@
 				D2BC72C52C1DB3A8001BC699 /* MainViewViewModel.swift */,
 				D2BC72D12C1DB3F2001BC699 /* LoginViewViewModel.swift */,
 				D2BC72D32C1DB3FE001BC699 /* RegistrationViewViewModel.swift */,
-				D2BC72C72C1DB3B4001BC699 /* ProfileViewViewModel.swift */,
+				D2BC72C72C1DB3B4001BC699 /* SettingsViewViewModel.swift */,
 				D2BC72C92C1DB3C1001BC699 /* HomeViewViewModel.swift */,
 				D2BC72CB2C1DB3CC001BC699 /* AddYarnViewViewModel.swift */,
 				D2BC72CD2C1DB3D9001BC699 /* AddToolViewViewModel.swift */,
@@ -270,7 +270,7 @@
 				D2BC72D22C1DB3F2001BC699 /* LoginViewViewModel.swift in Sources */,
 				D2BC72D42C1DB3FE001BC699 /* RegistrationViewViewModel.swift in Sources */,
 				D2BC72B02C1DB21D001BC699 /* HomeView.swift in Sources */,
-				D2BC72AE2C1DB205001BC699 /* ProfileView.swift in Sources */,
+				D2BC72AE2C1DB205001BC699 /* SettingsView.swift in Sources */,
 				D2BC72C42C1DB368001BC699 /* WishlistItem.swift in Sources */,
 				D2BC72CE2C1DB3D9001BC699 /* AddToolViewViewModel.swift in Sources */,
 				D2BC72BA2C1DB2AA001BC699 /* RegistrationView.swift in Sources */,
@@ -286,7 +286,7 @@
 				D2BC72902C1DAA62001BC699 /* YourYarnApp.swift in Sources */,
 				D2BC72C02C1DB34E001BC699 /* YarnItem.swift in Sources */,
 				D2BC72DE2C1DDD65001BC699 /* ResetPasswordView.swift in Sources */,
-				D2BC72C82C1DB3B4001BC699 /* ProfileViewViewModel.swift in Sources */,
+				D2BC72C82C1DB3B4001BC699 /* SettingsViewViewModel.swift in Sources */,
 				D2BC72D02C1DB3E7001BC699 /* AddWishListViewViewModel.swift in Sources */,
 				D2BC72CC2C1DB3CC001BC699 /* AddYarnViewViewModel.swift in Sources */,
 				D2BC72D62C1DB408001BC699 /* WishlistItemViewViewModel.swift in Sources */,
