@@ -9,41 +9,45 @@ import SwiftUI
 
 struct MainView: View {
     @StateObject var viewModel = MainViewViewModel()
+    @State private var selectedTab = 0
     
     init() {
-        UITabBar.appearance().backgroundColor = UIColor(red: 0.5255, green: 0.4157, blue: 0.6157, alpha:1)
+        UITabBar.appearance().backgroundColor = UIColor(red: 0.5255, green: 0.4157, blue: 0.6157, alpha: 1)
         UITabBar.appearance().unselectedItemTintColor = UIColor(red: 0.749, green: 0.702, blue: 0.7961, alpha: 1)
-      }
+    }
     
     var body: some View {
         if viewModel.isSignedIn, !viewModel.currentUserID.isEmpty {
-            //signed in so go to home page
-            TabView{
+            // Signed in, so go to home page
+            TabView(selection: $selectedTab) {
                 HomeView()
                     .tabItem {
                         Label("Home", systemImage: "house")
                     }
+                    .tag(0)
                 AddYarnView()
                     .tabItem {
-                        Label("Add Yarn", systemImage: "house")
+                        TabItemView(title: "Add Yarn", imageName: "Wool", isSelected: selectedTab == 1)
                     }
+                    .tag(1)
                 AddToolView()
                     .tabItem {
-                        Label("Add Tools", systemImage: "house")
+                        TabItemView(title: "Add Tools", imageName: "Tool", isSelected: selectedTab == 2)
                     }
+                    .tag(2)
                 AddWishListView()
                     .tabItem {
                         Label("Add To Wishlist", systemImage: "wand.and.stars")
                     }
+                    .tag(3)
                 SettingsView()
                     .tabItem {
                         Label("Settings", systemImage: "gearshape")
                     }
-            }.tint(.white)
-
-            
-        }
-        else{
+                    .tag(4)
+            }
+            .tint(.white)
+        } else {
             OpeningView()
         }
     }

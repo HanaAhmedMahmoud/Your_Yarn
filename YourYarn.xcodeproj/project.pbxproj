@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D26716CD2C2EDCEE00DED689 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26716CC2C2EDCED00DED689 /* TabItemView.swift */; };
 		D2B821BA2C29BA52000E0E3A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B821B92C29BA52000E0E3A /* Extensions.swift */; };
 		D2BC72902C1DAA62001BC699 /* YourYarnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC728F2C1DAA62001BC699 /* YourYarnApp.swift */; };
 		D2BC72922C1DAA62001BC699 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC72912C1DAA62001BC699 /* MainView.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D26716CC2C2EDCED00DED689 /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		D2B821B92C29BA52000E0E3A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D2BC728C2C1DAA62001BC699 /* YourYarn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourYarn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BC728F2C1DAA62001BC699 /* YourYarnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourYarnApp.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				D2BC72912C1DAA62001BC699 /* MainView.swift */,
+				D26716CC2C2EDCED00DED689 /* TabItemView.swift */,
 				D2BC72B72C1DB293001BC699 /* OpeningView.swift */,
 				D2BC72DB2C1DD76E001BC699 /* LoginView.swift */,
 				D2BC72B92C1DB2AA001BC699 /* RegistrationView.swift */,
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2BC72922C1DAA62001BC699 /* MainView.swift in Sources */,
+				D26716CD2C2EDCEE00DED689 /* TabItemView.swift in Sources */,
 				D2B821BA2C29BA52000E0E3A /* Extensions.swift in Sources */,
 				D2BC72D22C1DB3F2001BC699 /* LoginViewViewModel.swift in Sources */,
 				D2BC72D42C1DB3FE001BC699 /* RegistrationViewViewModel.swift in Sources */,
