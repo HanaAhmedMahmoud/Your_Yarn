@@ -58,7 +58,7 @@ struct LoginView: View {
                             
                             //Form valildation
                             if !viewModel.errorMessage.isEmpty{
-                                Text(viewModel.errorMessage).foregroundStyle(Color.red)
+                                Text(viewModel.errorMessage).foregroundStyle(Color.red).padding(.horizontal, geometry.size.width * 0.1)
                             }
                         }
                         

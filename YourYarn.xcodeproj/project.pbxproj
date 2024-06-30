@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D26716CD2C2EDCEE00DED689 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26716CC2C2EDCED00DED689 /* TabItemView.swift */; };
+		D26716D12C31904800DED689 /* ResetPasswordViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26716D02C31904800DED689 /* ResetPasswordViewViewModel.swift */; };
 		D2B821BA2C29BA52000E0E3A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B821B92C29BA52000E0E3A /* Extensions.swift */; };
 		D2BC72902C1DAA62001BC699 /* YourYarnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC728F2C1DAA62001BC699 /* YourYarnApp.swift */; };
 		D2BC72922C1DAA62001BC699 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC72912C1DAA62001BC699 /* MainView.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		D26716CC2C2EDCED00DED689 /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
+		D26716D02C31904800DED689 /* ResetPasswordViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewViewModel.swift; sourceTree = "<group>"; };
 		D2B821B92C29BA52000E0E3A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D2BC728C2C1DAA62001BC699 /* YourYarn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourYarn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BC728F2C1DAA62001BC699 /* YourYarnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourYarnApp.swift; sourceTree = "<group>"; };
@@ -157,11 +159,12 @@
 				D2BC72D12C1DB3F2001BC699 /* LoginViewViewModel.swift */,
 				D2BC72D32C1DB3FE001BC699 /* RegistrationViewViewModel.swift */,
 				D2BC72C72C1DB3B4001BC699 /* SettingsViewViewModel.swift */,
+				D26716D02C31904800DED689 /* ResetPasswordViewViewModel.swift */,
+				D2BC72D52C1DB408001BC699 /* WishlistItemViewViewModel.swift */,
 				D2BC72C92C1DB3C1001BC699 /* HomeViewViewModel.swift */,
 				D2BC72CB2C1DB3CC001BC699 /* AddYarnViewViewModel.swift */,
 				D2BC72CD2C1DB3D9001BC699 /* AddToolViewViewModel.swift */,
 				D2BC72CF2C1DB3E7001BC699 /* AddWishListViewViewModel.swift */,
-				D2BC72D52C1DB408001BC699 /* WishlistItemViewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				D2BC72DA2C1DCCB7001BC699 /* BackgroundView.swift in Sources */,
 				D2BC72902C1DAA62001BC699 /* YourYarnApp.swift in Sources */,
 				D2BC72C02C1DB34E001BC699 /* YarnItem.swift in Sources */,
+				D26716D12C31904800DED689 /* ResetPasswordViewViewModel.swift in Sources */,
 				D2BC72DE2C1DDD65001BC699 /* ResetPasswordView.swift in Sources */,
 				D2BC72C82C1DB3B4001BC699 /* SettingsViewViewModel.swift in Sources */,
 				D2BC72D02C1DB3E7001BC699 /* AddWishListViewViewModel.swift in Sources */,
@@ -429,6 +433,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"YourYarn/Preview Content\"";
+				DEVELOPMENT_TEAM = 46C7TRHD2R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Your Yarn";
@@ -458,6 +463,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"YourYarn/Preview Content\"";
+				DEVELOPMENT_TEAM = 46C7TRHD2R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Your Yarn";

@@ -27,6 +27,7 @@ class RegistrationViewViewModel : ObservableObject{
         
         Auth.auth().createUser(withEmail: email, password: password){ [weak self] result, error in
             guard let userID = result?.user.uid else{
+                self?.errorMessage = "User already exists, sign in"
                 return
             }
             

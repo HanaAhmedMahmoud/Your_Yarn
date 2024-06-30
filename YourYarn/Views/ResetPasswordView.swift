@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ResetPasswordView: View {
     
-    @State var email = ""
-    @State var username = ""
+    @StateObject var viewModel = ResetPasswordViewViewModel()
+    
     
     var body: some View {
         NavigationView {
@@ -35,13 +35,13 @@ struct ResetPasswordView: View {
                         
                         // Form
                         VStack(spacing: 15) {
-                            TextField("confirm email", text: $email)
+                            TextField("confirm email", text: $viewModel.email)
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                                 .padding(.horizontal, geometry.size.width * 0.1)
                             
                             
                             Button(action: {
-                                // code to send request to client to reset password
+                                viewModel.resetPassword()
                             }) {
                                 Text("Reset password")
                                     .frame(maxWidth: .infinity, minHeight: 50)
@@ -55,6 +55,17 @@ struct ResetPasswordView: View {
                             }
                             .padding(.horizontal, geometry.size.width * 0.1)
                         }
+                        
+                        VStack(){
+                            if !viewModel.errorMessage.isEmpty{
+                                Text(viewModel.errorMessage).foregroundStyle(Color.red)
+                            }
+                            
+                            if !viewModel.successMessage.isEmpty{
+                                Text(viewModel.successMessage).foregroundStyle(Color.green)
+                            }
+                        }.padding(.horizontal, geometry.size.width * 0.1)
+                        
                         
                         Spacer().frame(height: geometry.size.height * 0.1)
 

@@ -63,6 +63,12 @@ struct RegistrationView: View {
                             .padding(.horizontal, geometry.size.width * 0.1)
                         }
                         
+    
+                        if !viewModel.errorMessage.isEmpty{
+                            Text(viewModel.errorMessage).foregroundStyle(Color.red).padding(.horizontal, geometry.size.width * 0.1)
+                        }
+                        
+                        
                         Spacer().frame(height: geometry.size.height * 0.05)
 
                     }
