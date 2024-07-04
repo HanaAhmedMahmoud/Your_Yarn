@@ -9,15 +9,15 @@ import SwiftUI
 
 struct SettingsView: View {
     @StateObject var viewModel = SettingViewViewModel()
+    @State var isActive: Bool = false
+    
     var body: some View {
         GeometryReader { geometry in
-            
             NavigationView{
                 ZStack{
                     
                     //background colour
-                    Color(red: 0.9686, green: 0.9176, blue: 0.9922)
-                        .ignoresSafeArea()
+                    BackgroundView().backgroundColour.ignoresSafeArea()
                     
                     VStack{
                         
@@ -25,10 +25,8 @@ struct SettingsView: View {
                             Text("Settings")
                                 .bold()
                                 .font(.title)
-                                .foregroundStyle(Color(red: 0.3569, green: 0.0039, blue: 0.4824))
+                                .foregroundStyle(BackgroundView().titleColour)
                                 .padding()
-                            
-                            
                             
                             // Info: Name, email, edit account
                             VStack(alignment: .leading){
@@ -61,28 +59,20 @@ struct SettingsView: View {
                             VStack
                             {
                                 // sign out
-                                Button(action: {
-                                    viewModel.logout()
-                                }) {
-                                    Text("Log out")
-                                        .frame(maxWidth: .infinity, minHeight: 50)
-                                        .background(Color(red: 0.5255, green: 0.4157, blue: 0.6157))
-                                        .foregroundColor(.white)
-                                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 10)
-                                                .stroke(Color.white, lineWidth: 1)
-                                        )
-                                    
-                                }.padding(.top)
+                                GenericButtonView(buttonText: "Log Out",
+                                                  buttonColour: BackgroundView().buttonColour,
+                                                  textColour: Color.white,
+                                                  buttonOutline: Color.white,
+                                                  action: viewModel.logout)
+                                .padding(.top)
                                 
                                 // delete account
                                 Button(action: {
-                                    viewModel.deleteAccount()
+                                    isActive = true
                                 }) {
                                     Text("Delete account")
                                         .frame(maxWidth: .infinity, minHeight: 50)
-                                        .background(Color(red: 0.7137, green: 0.051, blue: 0.0471))
+                                        .background(BackgroundView().deletionColour)
                                         .foregroundColor(.white)
                                         .clipShape(RoundedRectangle(cornerRadius: 10))
                                         .overlay(
@@ -90,17 +80,32 @@ struct SettingsView: View {
                                                 .stroke(Color.gray, lineWidth: 1)
                                         )
                                 }
+                                
                             }.padding(.horizontal, geometry.size.width * 0.1)
                             
                             
+                            
                             Spacer()
+                            
                         }else{
                             Text("Loading profile...")
                         }
                         
                     }
+                    
+                    if isActive{
+                        PopUpView(isActive: $isActive,
+                                  title: "Delete Account?",
+                                  message: "Are you sure you want to delete your account?",
+                                  buttonTitle: "Yes I'm sure", 
+                                  buttonColour: BackgroundView().deletionColour,
+                                  action: viewModel.deleteAccount)
+                    }
+                    
                 }.onAppear{
                     viewModel.fetchUser()
+            
+                    
                 }
                 
             }

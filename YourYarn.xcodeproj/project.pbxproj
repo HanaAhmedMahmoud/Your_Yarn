@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		D26716CD2C2EDCEE00DED689 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26716CC2C2EDCED00DED689 /* TabItemView.swift */; };
 		D26716D12C31904800DED689 /* ResetPasswordViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26716D02C31904800DED689 /* ResetPasswordViewViewModel.swift */; };
+		D28D32562C36E6B40025CC2C /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D32552C36E6B40025CC2C /* PopUpView.swift */; };
+		D28D32582C37069E0025CC2C /* GenericButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D32572C37069E0025CC2C /* GenericButtonView.swift */; };
+		D28D325A2C370ACA0025CC2C /* GenericNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D32592C370ACA0025CC2C /* GenericNavigationView.swift */; };
 		D2B821BA2C29BA52000E0E3A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B821B92C29BA52000E0E3A /* Extensions.swift */; };
 		D2BC72902C1DAA62001BC699 /* YourYarnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC728F2C1DAA62001BC699 /* YourYarnApp.swift */; };
 		D2BC72922C1DAA62001BC699 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC72912C1DAA62001BC699 /* MainView.swift */; };
@@ -48,6 +51,9 @@
 /* Begin PBXFileReference section */
 		D26716CC2C2EDCED00DED689 /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		D26716D02C31904800DED689 /* ResetPasswordViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewViewModel.swift; sourceTree = "<group>"; };
+		D28D32552C36E6B40025CC2C /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
+		D28D32572C37069E0025CC2C /* GenericButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericButtonView.swift; sourceTree = "<group>"; };
+		D28D32592C370ACA0025CC2C /* GenericNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericNavigationView.swift; sourceTree = "<group>"; };
 		D2B821B92C29BA52000E0E3A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D2BC728C2C1DAA62001BC699 /* YourYarn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourYarn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BC728F2C1DAA62001BC699 /* YourYarnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourYarnApp.swift; sourceTree = "<group>"; };
@@ -148,6 +154,9 @@
 				D2BC72AD2C1DB205001BC699 /* SettingsView.swift */,
 				D2BC72BB2C1DB2FE001BC699 /* WishlistItemView.swift */,
 				D2BC72D92C1DCCB7001BC699 /* BackgroundView.swift */,
+				D28D32552C36E6B40025CC2C /* PopUpView.swift */,
+				D28D32572C37069E0025CC2C /* GenericButtonView.swift */,
+				D28D32592C370ACA0025CC2C /* GenericNavigationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -278,6 +287,7 @@
 				D2BC72D42C1DB3FE001BC699 /* RegistrationViewViewModel.swift in Sources */,
 				D2BC72B02C1DB21D001BC699 /* HomeView.swift in Sources */,
 				D2BC72AE2C1DB205001BC699 /* SettingsView.swift in Sources */,
+				D28D32582C37069E0025CC2C /* GenericButtonView.swift in Sources */,
 				D2BC72C42C1DB368001BC699 /* WishlistItem.swift in Sources */,
 				D2BC72CE2C1DB3D9001BC699 /* AddToolViewViewModel.swift in Sources */,
 				D2BC72BA2C1DB2AA001BC699 /* RegistrationView.swift in Sources */,
@@ -285,6 +295,7 @@
 				D2BC72B62C1DB26D001BC699 /* AddWishListView.swift in Sources */,
 				D2BC72DC2C1DD76E001BC699 /* LoginView.swift in Sources */,
 				D2BC72B42C1DB25B001BC699 /* AddToolView.swift in Sources */,
+				D28D32562C36E6B40025CC2C /* PopUpView.swift in Sources */,
 				D2BC72C62C1DB3A8001BC699 /* MainViewViewModel.swift in Sources */,
 				D2BC72B82C1DB293001BC699 /* OpeningView.swift in Sources */,
 				D2BC72BC2C1DB2FE001BC699 /* WishlistItemView.swift in Sources */,
@@ -299,6 +310,7 @@
 				D2BC72CC2C1DB3CC001BC699 /* AddYarnViewViewModel.swift in Sources */,
 				D2BC72D62C1DB408001BC699 /* WishlistItemViewViewModel.swift in Sources */,
 				D2BC72BE2C1DB33C001BC699 /* User.swift in Sources */,
+				D28D325A2C370ACA0025CC2C /* GenericNavigationView.swift in Sources */,
 				D2BC72C22C1DB35A001BC699 /* ToolItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

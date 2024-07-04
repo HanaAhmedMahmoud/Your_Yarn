@@ -9,7 +9,6 @@ import SwiftUI
 
 struct RegistrationView: View {
     @StateObject var viewModel = RegistrationViewViewModel()
-    
     var body: some View {
         NavigationView {
             ZStack {
@@ -47,19 +46,11 @@ struct RegistrationView: View {
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                                 .padding(.horizontal, geometry.size.width * 0.1)
                             
-                            Button(action: {
-                                viewModel.register()
-                            }) {
-                                Text("Sign up with email")
-                                    .frame(maxWidth: .infinity, minHeight: 50)
-                                    .background(Color.white)
-                                    .foregroundColor(.black)
-                                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 10)
-                                            .stroke(Color.gray, lineWidth: 1)
-                                    )
-                            }
+                            GenericButtonView(buttonText: "Sign up with email",
+                                              buttonColour: Color.white,
+                                              textColour: Color.black,
+                                              buttonOutline: Color.gray,
+                                              action: viewModel.register)
                             .padding(.horizontal, geometry.size.width * 0.1)
                         }
                         

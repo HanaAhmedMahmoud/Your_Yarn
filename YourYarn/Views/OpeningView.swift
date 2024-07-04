@@ -12,7 +12,6 @@ struct OpeningView: View {
         NavigationView {
             ZStack {
                 BackgroundView()
-                
                 GeometryReader { geometry in
                     VStack {
                         Spacer().frame(height: geometry.size.height * 0.1)
@@ -21,7 +20,7 @@ struct OpeningView: View {
                         VStack(spacing: 10) {
                             Text("Your Yarn")
                                 .font(.title)
-                                .foregroundColor(Color(red: 0.3569, green: 0, blue: 0.4824))
+                                .foregroundColor(BackgroundView().titleColour)
                                 .bold()
                             Text("your personal virtual wool collection")
                                 .font(.subheadline)
@@ -39,35 +38,16 @@ struct OpeningView: View {
                         
                         // Create new account
                         VStack(spacing: 15) {
-                            NavigationLink(destination: LoginView()) {
-                                Text("Login")
-                                    .frame(maxWidth: .infinity, minHeight: 50)
-                                    .background(Color.white)
-                                    .foregroundColor(.black)
-                                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 10)
-                                            .stroke(Color.gray, lineWidth: 1)
-                                    )
-                            }
-                            .padding(.horizontal, geometry.size.width * 0.1)
+                            GenericNavigationView(navTitle: "Login", destination: LoginView())
+                                .padding(.horizontal, geometry.size.width * 0.1)
                             
                             Text("A new member?")
                                 .foregroundColor(.gray)
                                 .font(.footnote)
                             
-                            NavigationLink(destination: RegistrationView()) {
-                                Text("Create Account")
-                                    .frame(maxWidth: .infinity, minHeight: 50)
-                                    .background(Color.white)
-                                    .foregroundColor(.black)
-                                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 10)
-                                            .stroke(Color.gray, lineWidth: 1)
-                                    )
-                            }
-                            .padding(.horizontal, geometry.size.width * 0.1)
+                            GenericNavigationView(navTitle: "Create Account", destination: RegistrationView())
+                                .padding(.horizontal, geometry.size.width * 0.1)
+
                         }
                         
                         Spacer()

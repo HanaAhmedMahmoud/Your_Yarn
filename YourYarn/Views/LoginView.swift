@@ -9,7 +9,6 @@ import SwiftUI
 
 struct LoginView: View {
     @StateObject var viewModel = LoginViewViewModel()
-    
     var body: some View {
         NavigationView {
             ZStack {
@@ -41,19 +40,12 @@ struct LoginView: View {
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                                 .padding(.horizontal, geometry.size.width * 0.1)
                             
-                            Button(action: {
-                                viewModel.login()
-                            }) {
-                                Text("Login")
-                                    .frame(maxWidth: .infinity, minHeight: 50)
-                                    .background(Color.white)
-                                    .foregroundColor(.black)
-                                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 10)
-                                            .stroke(Color.gray, lineWidth: 1)
-                                    )
-                            }
+                            
+                            GenericButtonView(buttonText: "Login",
+                                              buttonColour: Color.white, 
+                                              textColour: Color.black,
+                                              buttonOutline: Color.gray,
+                                              action: viewModel.login)
                             .padding(.horizontal, geometry.size.width * 0.1)
                             
                             //Form valildation
@@ -69,19 +61,8 @@ struct LoginView: View {
                                 .foregroundColor(.gray)
                                 .font(.footnote)
                             
-                            NavigationLink(destination: ResetPasswordView().navigationBarBackButtonHidden(true)) {
-                                Text("Reset password")
-                                    .frame(maxWidth: .infinity, minHeight: 50)
-                                    .background(Color.white)
-                                    .foregroundColor(.black)
-                                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 10)
-                                            .stroke(Color.gray, lineWidth: 1)
-                                    )
-
-                            }
-                            .padding(.horizontal, geometry.size.width * 0.1)
+                            GenericNavigationView(navTitle: "Reset password", destination: ResetPasswordView().navigationBarBackButtonHidden(true))
+                                .padding(.horizontal, geometry.size.width * 0.1)
                             
                         }
                         

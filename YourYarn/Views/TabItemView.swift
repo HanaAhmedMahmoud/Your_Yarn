@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TabItemView: View {
+    
     let title: String
     let imageName: String
     let isSelected: Bool
@@ -16,9 +17,9 @@ struct TabItemView: View {
         VStack {
             Image(imageName)
                 .renderingMode(.template)
-                .foregroundColor(isSelected ? .white : Color(UIColor(red: 0.749, green: 0.702, blue: 0.7961, alpha: 1)))
+                .foregroundColor(isSelected ? .white : Color(BackgroundView().unselectedColour))
             Text(title)
-                .foregroundColor(isSelected ? .white : Color(UIColor(red: 0.749, green: 0.702, blue: 0.7961, alpha: 1)))
+                .foregroundColor(isSelected ? .white : Color(BackgroundView().unselectedColour))
         }
     }
 }

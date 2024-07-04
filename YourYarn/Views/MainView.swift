@@ -12,8 +12,8 @@ struct MainView: View {
     @State private var selectedTab = 0
     
     init() {
-        UITabBar.appearance().backgroundColor = UIColor(red: 0.5255, green: 0.4157, blue: 0.6157, alpha: 1)
-        UITabBar.appearance().unselectedItemTintColor = UIColor(red: 0.749, green: 0.702, blue: 0.7961, alpha: 1)
+        UITabBar.appearance().backgroundColor = BackgroundView().tabBarColour
+        UITabBar.appearance().unselectedItemTintColor = BackgroundView().unselectedColour
     }
     
     var body: some View {

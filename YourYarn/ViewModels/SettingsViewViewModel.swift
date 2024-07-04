@@ -15,12 +15,19 @@ class SettingViewViewModel: ObservableObject{
     @Published var errorMessage = "Failed to log out"
     
     init() {}
-    
+
+    func getUserID() -> String? {
+        return Auth.auth().currentUser?.uid
+    }
     
     func fetchUser(){
-        guard let userID = Auth.auth().currentUser?.uid else{
-            return
+        
+        //get userID
+        guard let userID = getUserID() else {
+                    self.errorMessage = "No user is currently signed in."
+                    return
         }
+    
         let db = Firestore.firestore()
         db.collection("users").document(userID).getDocument{ [weak self] snapshot, error in
             guard let data = snapshot?.data(), error == nil else{
@@ -46,6 +53,34 @@ class SettingViewViewModel: ObservableObject{
     }
     
     func deleteAccount(){
+        //get user id
+        guard let userID = getUserID() else {
+            self.errorMessage = "No user is currently signed in."
+            return
+        }
         
+        //get reference to Reference to db
+        let db = Firestore.firestore()
+        
+        //delete account from firebase auth
+        Auth.auth().currentUser?.delete { [weak self] error in
+            if let error = error {
+                self?.errorMessage = "Failed to delete user account"
+            } else {
+                self?.errorMessage = ""
+                return
+            }
+        }
+        
+        //delete data
+        db.collection("users").document(userID).delete { error in
+            if let error = error {
+                self.errorMessage = "error to delete user account"
+            } else {
+                self.errorMessage = ""
+                return
+            }
+        }
+
     }
 }

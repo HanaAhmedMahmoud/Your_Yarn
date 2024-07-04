@@ -23,7 +23,6 @@ class ResetPasswordViewViewModel: ObservableObject{
         }
         
         //check if account exists
-        
         Auth.auth().sendPasswordReset(withEmail: email) { [weak self] error in
             if let error = error {
                 self?.errorMessage = error.localizedDescription

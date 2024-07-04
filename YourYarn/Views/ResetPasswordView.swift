@@ -11,7 +11,6 @@ struct ResetPasswordView: View {
     
     @StateObject var viewModel = ResetPasswordViewViewModel()
     
-    
     var body: some View {
         NavigationView {
             ZStack {
@@ -39,20 +38,11 @@ struct ResetPasswordView: View {
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                                 .padding(.horizontal, geometry.size.width * 0.1)
                             
-                            
-                            Button(action: {
-                                viewModel.resetPassword()
-                            }) {
-                                Text("Reset password")
-                                    .frame(maxWidth: .infinity, minHeight: 50)
-                                    .background(Color.white)
-                                    .foregroundColor(.black)
-                                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 10)
-                                            .stroke(Color.gray, lineWidth: 1)
-                                    )
-                            }
+                            GenericButtonView(buttonText: "Login",
+                                              buttonColour: Color.white,
+                                              textColour: Color.black,
+                                              buttonOutline: Color.gray,
+                                              action: viewModel.resetPassword)
                             .padding(.horizontal, geometry.size.width * 0.1)
                         }
                         
