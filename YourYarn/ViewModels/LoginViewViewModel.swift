@@ -16,13 +16,14 @@ class LoginViewViewModel: ObservableObject {
     init() {}
 
     func login() {
-        guard validate() else {
+        let errorMessage = Validate.emailValidation(email: email)
+        guard errorMessage != "" else {
             return
         }
 
         // Try to login
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-            if let error = error as NSError? {
+            if (error as NSError?) != nil {
                 self?.errorMessage = "Invalid username or password."
             } else {
                 // Clear any previous error message on successful login
@@ -31,25 +32,5 @@ class LoginViewViewModel: ObservableObject {
         }
     }
 
-    private func validate() -> Bool {
-        errorMessage = ""
-
-        // Empty space validation
-        guard !email.trimmingCharacters(in: .whitespaces).isEmpty,
-              !password.trimmingCharacters(in: .whitespaces).isEmpty else {
-            errorMessage = "Please fill in all fields."
-            return false
-        }
-
-        // Email validation
-        guard email.contains("@") && email.contains(".") else {
-            errorMessage = "Please enter a valid email."
-            return false
-        }
-
-        return true
-    }
-
    
-    
 }

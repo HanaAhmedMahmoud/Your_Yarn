@@ -21,7 +21,9 @@ class RegistrationViewViewModel : ObservableObject{
     init(){}
     
     func register() {
-        guard validate() else{
+        let validationErrorMessage = Validate.validateCreateAccount(email: email, username: username, password: password, confirmPassword: confirmPassword)
+        guard validationErrorMessage.isEmpty else {
+            self.errorMessage = validationErrorMessage
             return
         }
         
@@ -47,35 +49,4 @@ class RegistrationViewViewModel : ObservableObject{
             .setData(newUser.asDictionary())
     }
     
-    private func validate() -> Bool{
-        
-        //check for white spaces
-        guard !username.trimmingCharacters(in: .whitespaces).isEmpty,
-              !email.trimmingCharacters(in: .whitespaces).isEmpty,
-              !password.trimmingCharacters(in: .whitespaces).isEmpty,
-              !confirmPassword.trimmingCharacters(in: .whitespaces).isEmpty else {
-            errorMessage = "Please fill in all fields."
-            return false
-        }
-        
-        //check email syntax
-        guard email.contains("@") && email.contains(".") else{
-            errorMessage = "Please enter valid email."
-            return false
-        }
-        
-        //check password and confirm password are the same
-        guard password == confirmPassword else {
-            errorMessage = "Passwords do not match."
-            return false
-        }
-        
-        //check password for security
-        guard password.count >= 6 else {
-            errorMessage = "Password is too weak."
-            return false
-        }
-        
-        return true
-    }
 }

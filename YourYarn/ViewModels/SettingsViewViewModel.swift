@@ -64,7 +64,7 @@ class SettingViewViewModel: ObservableObject{
         
         //delete account from firebase auth
         Auth.auth().currentUser?.delete { [weak self] error in
-            if let error = error {
+            if error != nil {
                 self?.errorMessage = "Failed to delete user account"
             } else {
                 self?.errorMessage = ""
@@ -74,7 +74,7 @@ class SettingViewViewModel: ObservableObject{
         
         //delete data
         db.collection("users").document(userID).delete { error in
-            if let error = error {
+            if error != nil {
                 self.errorMessage = "error to delete user account"
             } else {
                 self.errorMessage = ""

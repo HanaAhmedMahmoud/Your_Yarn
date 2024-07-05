@@ -18,7 +18,9 @@ class ResetPasswordViewViewModel: ObservableObject{
     func resetPassword(){
         
         //validate email entered
-        guard validate() else{
+        let validationErrorMessage = Validate.emailValidation(email: email)
+        guard validationErrorMessage.isEmpty else {
+            self.errorMessage = validationErrorMessage
             return
         }
         
@@ -32,25 +34,6 @@ class ResetPasswordViewViewModel: ObservableObject{
             }
         }
        
-    }
-    
-    private func validate() -> Bool {
-        errorMessage = ""
-        
-        //Empty space validation
-        guard !email.trimmingCharacters(in: .whitespaces).isEmpty else{
-            errorMessage = "Please fill in all fields."
-            return false
-        }
-        
-        //email validation
-        guard email.contains("@") && email.contains(".") else{
-            errorMessage = "Please enter valid email."
-            return false
-        }
-        
-        return true
-        
     }
     
     

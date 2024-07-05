@@ -12,6 +12,8 @@
 		D28D32562C36E6B40025CC2C /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D32552C36E6B40025CC2C /* PopUpView.swift */; };
 		D28D32582C37069E0025CC2C /* GenericButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D32572C37069E0025CC2C /* GenericButtonView.swift */; };
 		D28D325A2C370ACA0025CC2C /* GenericNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D32592C370ACA0025CC2C /* GenericNavigationView.swift */; };
+		D28D325D2C382EC40025CC2C /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D325C2C382EC40025CC2C /* Validate.swift */; };
+		D28D325F2C3837DD0025CC2C /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D325E2C3837DD0025CC2C /* Database.swift */; };
 		D2B821BA2C29BA52000E0E3A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B821B92C29BA52000E0E3A /* Extensions.swift */; };
 		D2BC72902C1DAA62001BC699 /* YourYarnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC728F2C1DAA62001BC699 /* YourYarnApp.swift */; };
 		D2BC72922C1DAA62001BC699 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC72912C1DAA62001BC699 /* MainView.swift */; };
@@ -54,6 +56,8 @@
 		D28D32552C36E6B40025CC2C /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		D28D32572C37069E0025CC2C /* GenericButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericButtonView.swift; sourceTree = "<group>"; };
 		D28D32592C370ACA0025CC2C /* GenericNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericNavigationView.swift; sourceTree = "<group>"; };
+		D28D325C2C382EC40025CC2C /* Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
+		D28D325E2C3837DD0025CC2C /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		D2B821B92C29BA52000E0E3A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D2BC728C2C1DAA62001BC699 /* YourYarn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourYarn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BC728F2C1DAA62001BC699 /* YourYarnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourYarnApp.swift; sourceTree = "<group>"; };
@@ -102,6 +106,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D28D325B2C382EA40025CC2C /* Helper Funcions */ = {
+			isa = PBXGroup;
+			children = (
+				D28D325C2C382EC40025CC2C /* Validate.swift */,
+				D28D325E2C3837DD0025CC2C /* Database.swift */,
+			);
+			path = "Helper Funcions";
+			sourceTree = "<group>";
+		};
 		D2BC72832C1DAA62001BC699 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +187,7 @@
 				D2BC72CB2C1DB3CC001BC699 /* AddYarnViewViewModel.swift */,
 				D2BC72CD2C1DB3D9001BC699 /* AddToolViewViewModel.swift */,
 				D2BC72CF2C1DB3E7001BC699 /* AddWishListViewViewModel.swift */,
+				D28D325B2C382EA40025CC2C /* Helper Funcions */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -280,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D28D325D2C382EC40025CC2C /* Validate.swift in Sources */,
 				D2BC72922C1DAA62001BC699 /* MainView.swift in Sources */,
 				D26716CD2C2EDCEE00DED689 /* TabItemView.swift in Sources */,
 				D2B821BA2C29BA52000E0E3A /* Extensions.swift in Sources */,
@@ -309,6 +324,7 @@
 				D2BC72D02C1DB3E7001BC699 /* AddWishListViewViewModel.swift in Sources */,
 				D2BC72CC2C1DB3CC001BC699 /* AddYarnViewViewModel.swift in Sources */,
 				D2BC72D62C1DB408001BC699 /* WishlistItemViewViewModel.swift in Sources */,
+				D28D325F2C3837DD0025CC2C /* Database.swift in Sources */,
 				D2BC72BE2C1DB33C001BC699 /* User.swift in Sources */,
 				D28D325A2C370ACA0025CC2C /* GenericNavigationView.swift in Sources */,
 				D2BC72C22C1DB35A001BC699 /* ToolItem.swift in Sources */,
