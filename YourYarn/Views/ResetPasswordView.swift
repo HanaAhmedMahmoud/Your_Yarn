@@ -10,6 +10,7 @@ import SwiftUI
 struct ResetPasswordView: View {
     
     @StateObject var viewModel = ResetPasswordViewViewModel()
+    @State private var buttonDisabled = false
     
     var body: some View {
         NavigationView {
@@ -34,16 +35,27 @@ struct ResetPasswordView: View {
                         
                         // Form
                         VStack(spacing: 15) {
-                            TextField("confirm email", text: $viewModel.email)
+                            TextField("Enter email", text: $viewModel.email)
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                                 .padding(.horizontal, geometry.size.width * 0.1)
                             
-                            GenericButtonView(buttonText: "Login",
+                            GenericButtonView(buttonText: buttonDisabled ? "Wait to click again" : "Login",
                                               buttonColour: Color.white,
                                               textColour: Color.black,
                                               buttonOutline: Color.gray,
-                                              action: viewModel.resetPassword)
+                                              action: {
+                                                    guard viewModel.isValidEmail() else {
+                                                    return
+                                                    }
+                                                       viewModel.resetPassword()
+                                                       buttonDisabled = true
+                                                       DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                                                           buttonDisabled = false}
+                                
+                                                      })
+                            .disabled(buttonDisabled)
                             .padding(.horizontal, geometry.size.width * 0.1)
+                            
                         }
                         
                         VStack(){
@@ -55,6 +67,7 @@ struct ResetPasswordView: View {
                                 Text(viewModel.successMessage).foregroundStyle(Color.green)
                             }
                         }.padding(.horizontal, geometry.size.width * 0.1)
+                            .padding(.top) 
                         
                         
                         Spacer().frame(height: geometry.size.height * 0.1)

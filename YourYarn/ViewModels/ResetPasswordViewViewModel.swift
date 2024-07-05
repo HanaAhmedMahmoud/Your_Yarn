@@ -15,6 +15,17 @@ class ResetPasswordViewViewModel: ObservableObject{
     
     init() {}
     
+    func isValidEmail() -> Bool {
+            let validationErrorMessage = Validate.emailValidation(email: email)
+            if validationErrorMessage.isEmpty {
+                return true
+            } else {
+                self.errorMessage = validationErrorMessage
+                self.successMessage = ""
+                return false
+            }
+        }
+    
     func resetPassword(){
         
         //validate email entered
@@ -31,6 +42,7 @@ class ResetPasswordViewViewModel: ObservableObject{
             }
             else{
                 self?.successMessage = "Password reset email sent successfully."
+                self?.errorMessage = ""
             }
         }
        
