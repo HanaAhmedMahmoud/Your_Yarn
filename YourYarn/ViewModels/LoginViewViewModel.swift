@@ -17,7 +17,7 @@ class LoginViewViewModel: ObservableObject {
 
     func login() {
         let errorMessage = Validate.emailValidation(email: email)
-        guard errorMessage != "" else {
+        guard errorMessage.isEmpty else {
             return
         }
 

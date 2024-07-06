@@ -10,7 +10,11 @@ import SwiftUI
 struct ResetPasswordView: View {
     
     @StateObject var viewModel = ResetPasswordViewViewModel()
+    
+    //reset button disable and timer
     @State private var buttonDisabled = false
+    @State private var number = 60
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         NavigationView {
@@ -22,13 +26,7 @@ struct ResetPasswordView: View {
                         Spacer().frame(height: geometry.size.height * 0.35)
                         
                         VStack(spacing: 10) {
-                            Text("Reset Password:")
-                                .bold()
-                                .font(.headline)
-                            Text("Confirm your details, then check your emails to reset your password")
-                                .font(.footnote)
-                                .foregroundColor(.gray)
-                                .multilineTextAlignment(.center)
+                            GenericTitleAndSubtitleView(title: "Reset Password:", subtitle: "Confirm your details, then check your emails to reset your password").multilineTextAlignment(.center)
                                 
                         }
                         .padding(.bottom, 20)
@@ -39,7 +37,7 @@ struct ResetPasswordView: View {
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                                 .padding(.horizontal, geometry.size.width * 0.1)
                             
-                            GenericButtonView(buttonText: buttonDisabled ? "Wait to click again" : "Login",
+                            GenericButtonView(buttonText: buttonDisabled ? "Wait \(number) seconds to click again" : "Login",
                                               buttonColour: Color.white,
                                               textColour: Color.black,
                                               buttonOutline: Color.gray,
@@ -49,12 +47,18 @@ struct ResetPasswordView: View {
                                                     }
                                                        viewModel.resetPassword()
                                                        buttonDisabled = true
-                                                       DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                                                           buttonDisabled = false}
-                                
+                                                       startCountdown()
                                                       })
                             .disabled(buttonDisabled)
                             .padding(.horizontal, geometry.size.width * 0.1)
+                            .onReceive(timer) { _ in
+                                if buttonDisabled && number > 0 {
+                                    number -= 1
+                                } else if number == 0 {
+                                    buttonDisabled = false
+                                    number = 60
+                                }
+                            }
                             
                         }
                         
@@ -67,7 +71,7 @@ struct ResetPasswordView: View {
                                 Text(viewModel.successMessage).foregroundStyle(Color.green)
                             }
                         }.padding(.horizontal, geometry.size.width * 0.1)
-                            .padding(.top) 
+                            .padding(.top)
                         
                         
                         Spacer().frame(height: geometry.size.height * 0.1)
@@ -77,8 +81,21 @@ struct ResetPasswordView: View {
             }
         }
     }
+    
+    private func startCountdown() {
+        number = 60
+        _ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            if number > 0 {
+                number -= 1
+            } else {
+                buttonDisabled = false
+                timer.invalidate()
+            }
+        }
+    }
 }
 
 #Preview {
     ResetPasswordView()
 }
+

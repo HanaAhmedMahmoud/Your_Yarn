@@ -19,12 +19,7 @@ struct LoginView: View {
                         Spacer().frame(height: geometry.size.height * 0.3)
                         
                         VStack(spacing: 10) {
-                            Text("Login to your account:")
-                                .bold()
-                                .font(.headline)
-                            Text("Enter your details to log into the app")
-                                .font(.footnote)
-                                .foregroundColor(.gray)
+                             GenericTitleAndSubtitleView(title: "Login to your account:", subtitle: "Enter your details to log into the app")
                         }
                         .padding(.bottom, 20)
                         
@@ -57,9 +52,7 @@ struct LoginView: View {
                         Spacer().frame(height: geometry.size.height * 0.05)
                         
                         VStack(spacing: 10) {
-                            Text("Forgot your password?")
-                                .foregroundColor(.gray)
-                                .font(.footnote)
+                            GenericFootnote(message: "Forgot your password?")
                             
                             GenericNavigationView(navTitle: "Reset password", destination: ResetPasswordView().navigationBarBackButtonHidden(true))
                                 .padding(.horizontal, geometry.size.width * 0.1)

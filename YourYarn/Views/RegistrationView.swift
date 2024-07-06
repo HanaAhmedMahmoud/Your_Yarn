@@ -19,12 +19,7 @@ struct RegistrationView: View {
                         Spacer().frame(height: geometry.size.height * 0.3)
                         
                         VStack(spacing: 10) {
-                            Text("Create an account:")
-                                .bold()
-                                .font(.headline)
-                            Text("Enter your details to sign up for the app")
-                                .font(.footnote)
-                                .foregroundColor(.gray)
+                            GenericTitleAndSubtitleView(title: "Create an account:", subtitle: "Enter your details to sign up for the app")
                         }
                         .padding(.bottom, 20)
                         

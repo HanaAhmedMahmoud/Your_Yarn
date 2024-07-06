@@ -41,9 +41,7 @@ struct OpeningView: View {
                             GenericNavigationView(navTitle: "Login", destination: LoginView())
                                 .padding(.horizontal, geometry.size.width * 0.1)
                             
-                            Text("A new member?")
-                                .foregroundColor(.gray)
-                                .font(.footnote)
+                            GenericFootnote(message: "A new member?")
                             
                             GenericNavigationView(navTitle: "Create Account", destination: RegistrationView())
                                 .padding(.horizontal, geometry.size.width * 0.1)

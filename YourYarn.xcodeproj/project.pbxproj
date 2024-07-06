@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2028B262C39914A00411D8D /* GenericTitleAndSubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2028B252C39914A00411D8D /* GenericTitleAndSubtitleView.swift */; };
+		D2028B292C39944D00411D8D /* GenericFootnote.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2028B282C39944D00411D8D /* GenericFootnote.swift */; };
+		D2028B312C399EFC00411D8D /* YourYarnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2028B302C399EFC00411D8D /* YourYarnUITests.swift */; };
+		D2028B332C399EFC00411D8D /* YourYarnUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2028B322C399EFC00411D8D /* YourYarnUITestsLaunchTests.swift */; };
 		D26716CD2C2EDCEE00DED689 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26716CC2C2EDCED00DED689 /* TabItemView.swift */; };
 		D26716D12C31904800DED689 /* ResetPasswordViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26716D02C31904800DED689 /* ResetPasswordViewViewModel.swift */; };
 		D28D32562C36E6B40025CC2C /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D32552C36E6B40025CC2C /* PopUpView.swift */; };
@@ -50,7 +54,22 @@
 		D2BC72DE2C1DDD65001BC699 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC72DD2C1DDD65001BC699 /* ResetPasswordView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D2028B342C399EFC00411D8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2BC72842C1DAA62001BC699 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2BC728B2C1DAA62001BC699;
+			remoteInfo = YourYarn;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		D2028B252C39914A00411D8D /* GenericTitleAndSubtitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTitleAndSubtitleView.swift; sourceTree = "<group>"; };
+		D2028B282C39944D00411D8D /* GenericFootnote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericFootnote.swift; sourceTree = "<group>"; };
+		D2028B2E2C399EFC00411D8D /* YourYarnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YourYarnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2028B302C399EFC00411D8D /* YourYarnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourYarnUITests.swift; sourceTree = "<group>"; };
+		D2028B322C399EFC00411D8D /* YourYarnUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourYarnUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D26716CC2C2EDCED00DED689 /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		D26716D02C31904800DED689 /* ResetPasswordViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewViewModel.swift; sourceTree = "<group>"; };
 		D28D32552C36E6B40025CC2C /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
@@ -92,6 +111,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D2028B2B2C399EFC00411D8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2BC72892C1DAA62001BC699 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -106,6 +132,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D2028B272C3991C800411D8D /* GenericViews */ = {
+			isa = PBXGroup;
+			children = (
+				D28D32592C370ACA0025CC2C /* GenericNavigationView.swift */,
+				D28D32572C37069E0025CC2C /* GenericButtonView.swift */,
+				D2028B252C39914A00411D8D /* GenericTitleAndSubtitleView.swift */,
+				D2028B282C39944D00411D8D /* GenericFootnote.swift */,
+			);
+			path = GenericViews;
+			sourceTree = "<group>";
+		};
+		D2028B2F2C399EFC00411D8D /* YourYarnUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D2028B302C399EFC00411D8D /* YourYarnUITests.swift */,
+				D2028B322C399EFC00411D8D /* YourYarnUITestsLaunchTests.swift */,
+			);
+			path = YourYarnUITests;
+			sourceTree = "<group>";
+		};
 		D28D325B2C382EA40025CC2C /* Helper Funcions */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				D2BC728E2C1DAA62001BC699 /* YourYarn */,
+				D2028B2F2C399EFC00411D8D /* YourYarnUITests */,
 				D2BC728D2C1DAA62001BC699 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				D2BC728C2C1DAA62001BC699 /* YourYarn.app */,
+				D2028B2E2C399EFC00411D8D /* YourYarnUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,8 +216,7 @@
 				D2BC72BB2C1DB2FE001BC699 /* WishlistItemView.swift */,
 				D2BC72D92C1DCCB7001BC699 /* BackgroundView.swift */,
 				D28D32552C36E6B40025CC2C /* PopUpView.swift */,
-				D28D32572C37069E0025CC2C /* GenericButtonView.swift */,
-				D28D32592C370ACA0025CC2C /* GenericNavigationView.swift */,
+				D2028B272C3991C800411D8D /* GenericViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,6 +264,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D2028B2D2C399EFC00411D8D /* YourYarnUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2028B362C399EFC00411D8D /* Build configuration list for PBXNativeTarget "YourYarnUITests" */;
+			buildPhases = (
+				D2028B2A2C399EFC00411D8D /* Sources */,
+				D2028B2B2C399EFC00411D8D /* Frameworks */,
+				D2028B2C2C399EFC00411D8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2028B352C399EFC00411D8D /* PBXTargetDependency */,
+			);
+			name = YourYarnUITests;
+			productName = YourYarnUITests;
+			productReference = D2028B2E2C399EFC00411D8D /* YourYarnUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		D2BC728B2C1DAA62001BC699 /* YourYarn */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2BC729A2C1DAA64001BC699 /* Build configuration list for PBXNativeTarget "YourYarn" */;
@@ -250,6 +315,10 @@
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					D2028B2D2C399EFC00411D8D = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = D2BC728B2C1DAA62001BC699;
+					};
 					D2BC728B2C1DAA62001BC699 = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -272,11 +341,19 @@
 			projectRoot = "";
 			targets = (
 				D2BC728B2C1DAA62001BC699 /* YourYarn */,
+				D2028B2D2C399EFC00411D8D /* YourYarnUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D2028B2C2C399EFC00411D8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2BC728A2C1DAA62001BC699 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -290,6 +367,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D2028B2A2C399EFC00411D8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2028B332C399EFC00411D8D /* YourYarnUITestsLaunchTests.swift in Sources */,
+				D2028B312C399EFC00411D8D /* YourYarnUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2BC72882C1DAA62001BC699 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -306,12 +392,14 @@
 				D2BC72C42C1DB368001BC699 /* WishlistItem.swift in Sources */,
 				D2BC72CE2C1DB3D9001BC699 /* AddToolViewViewModel.swift in Sources */,
 				D2BC72BA2C1DB2AA001BC699 /* RegistrationView.swift in Sources */,
+				D2028B262C39914A00411D8D /* GenericTitleAndSubtitleView.swift in Sources */,
 				D2BC72B22C1DB24C001BC699 /* AddYarnView.swift in Sources */,
 				D2BC72B62C1DB26D001BC699 /* AddWishListView.swift in Sources */,
 				D2BC72DC2C1DD76E001BC699 /* LoginView.swift in Sources */,
 				D2BC72B42C1DB25B001BC699 /* AddToolView.swift in Sources */,
 				D28D32562C36E6B40025CC2C /* PopUpView.swift in Sources */,
 				D2BC72C62C1DB3A8001BC699 /* MainViewViewModel.swift in Sources */,
+				D2028B292C39944D00411D8D /* GenericFootnote.swift in Sources */,
 				D2BC72B82C1DB293001BC699 /* OpeningView.swift in Sources */,
 				D2BC72BC2C1DB2FE001BC699 /* WishlistItemView.swift in Sources */,
 				D2BC72CA2C1DB3C1001BC699 /* HomeViewViewModel.swift in Sources */,
@@ -333,7 +421,49 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D2028B352C399EFC00411D8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2BC728B2C1DAA62001BC699 /* YourYarn */;
+			targetProxy = D2028B342C399EFC00411D8D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		D2028B372C399EFC00411D8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 46C7TRHD2R;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hana.YourYarnUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YourYarn;
+			};
+			name = Debug;
+		};
+		D2028B382C399EFC00411D8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 46C7TRHD2R;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hana.YourYarnUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YourYarn;
+			};
+			name = Release;
+		};
 		D2BC72982C1DAA64001BC699 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -516,6 +646,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D2028B362C399EFC00411D8D /* Build configuration list for PBXNativeTarget "YourYarnUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2028B372C399EFC00411D8D /* Debug */,
+				D2028B382C399EFC00411D8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D2BC72872C1DAA62001BC699 /* Build configuration list for PBXProject "YourYarn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

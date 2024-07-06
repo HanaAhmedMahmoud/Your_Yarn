@@ -22,6 +22,7 @@ struct GenericNavigationView<Destination: View>: View {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.gray, lineWidth: 1)
                 )
+                .accessibilityIdentifier(navTitle) 
         }
     }
 }
