@@ -15,18 +15,13 @@ struct SettingsView: View {
         GeometryReader { geometry in
             NavigationView{
                 ZStack{
-                    
                     //background colour
                     BackgroundView().backgroundColour.ignoresSafeArea()
                     
                     VStack{
                         
                         if let user = viewModel.user {
-                            Text("Settings")
-                                .bold()
-                                .font(.title)
-                                .foregroundStyle(BackgroundView().titleColour)
-                                .padding()
+                            GenericTitle(title: "Settings")
                             
                             // Info: Name, email, edit account
                             VStack(alignment: .leading){
@@ -67,19 +62,11 @@ struct SettingsView: View {
                                 .padding(.top)
                                 
                                 // delete account
-                                Button(action: {
-                                    isActive = true
-                                }) {
-                                    Text("Delete account")
-                                        .frame(maxWidth: .infinity, minHeight: 50)
-                                        .background(BackgroundView().deletionColour)
-                                        .foregroundColor(.white)
-                                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 10)
-                                                .stroke(Color.gray, lineWidth: 1)
-                                        )
-                                }
+                                GenericButtonView(buttonText: "Delete account",
+                                                  buttonColour: BackgroundView().deletionColour,
+                                                  textColour: Color.white,
+                                                  buttonOutline: Color.gray,
+                                                  action: { isActive = true } )
                                 
                             }.padding(.horizontal, geometry.size.width * 0.1)
                             

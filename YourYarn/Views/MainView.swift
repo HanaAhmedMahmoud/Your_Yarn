@@ -49,6 +49,10 @@ struct MainView: View {
             .tint(.white)
         } else {
             OpeningView()
+            //so when you open the app it always open on the home page
+                .onAppear(){
+                    selectedTab = 0
+                }
         }
     }
 }
