@@ -20,7 +20,7 @@ struct MainView: View {
         if viewModel.isSignedIn, !viewModel.currentUserID.isEmpty {
             // Signed in, so go to home page
             TabView(selection: $selectedTab) {
-                HomeView()
+                HomeView(userID: viewModel.currentUserID)
                     .tabItem {
                         Label("Home", systemImage: "house")
                     }
