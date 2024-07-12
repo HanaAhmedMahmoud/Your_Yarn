@@ -19,7 +19,7 @@ struct LoginView: View {
                         Spacer().frame(height: geometry.size.height * 0.3)
                         
                         VStack(spacing: 10) {
-                             GenericTitleAndSubtitleView(title: "Login to your account:", subtitle: "Enter your details to log into the app")
+                            GenericTitleAndSubtitleView(title: "Login to your account:", subtitle: "Enter your details to log into the app", titleColour: Color.black)
                         }
                         .padding(.bottom, 20)
                         

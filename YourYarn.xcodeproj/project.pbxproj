@@ -53,6 +53,7 @@
 		D2BC72DA2C1DCCB7001BC699 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC72D92C1DCCB7001BC699 /* BackgroundView.swift */; };
 		D2BC72DC2C1DD76E001BC699 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC72DB2C1DD76E001BC699 /* LoginView.swift */; };
 		D2BC72DE2C1DDD65001BC699 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC72DD2C1DDD65001BC699 /* ResetPasswordView.swift */; };
+		D2FA75B42C41343500D48C43 /* ToggleItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA75B32C41343500D48C43 /* ToggleItemViewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		D2BC72D92C1DCCB7001BC699 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		D2BC72DB2C1DD76E001BC699 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D2BC72DD2C1DDD65001BC699 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		D2FA75B32C41343500D48C43 /* ToggleItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleItemViewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 				D2BC72CB2C1DB3CC001BC699 /* AddYarnViewViewModel.swift */,
 				D2BC72CD2C1DB3D9001BC699 /* AddToolViewViewModel.swift */,
 				D2BC72CF2C1DB3E7001BC699 /* AddWishListViewViewModel.swift */,
+				D2FA75B32C41343500D48C43 /* ToggleItemViewViewModel.swift */,
 				D28D325B2C382EA40025CC2C /* Helper Funcions */,
 			);
 			path = ViewModels;
@@ -407,6 +410,7 @@
 				D2BC72B82C1DB293001BC699 /* OpeningView.swift in Sources */,
 				D2BC72BC2C1DB2FE001BC699 /* WishlistItemView.swift in Sources */,
 				D2BC72CA2C1DB3C1001BC699 /* HomeViewViewModel.swift in Sources */,
+				D2FA75B42C41343500D48C43 /* ToggleItemViewViewModel.swift in Sources */,
 				D2BC72DA2C1DCCB7001BC699 /* BackgroundView.swift in Sources */,
 				D2BC72902C1DAA62001BC699 /* YourYarnApp.swift in Sources */,
 				D2BC72C02C1DB34E001BC699 /* YarnItem.swift in Sources */,

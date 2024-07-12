@@ -26,7 +26,7 @@ struct ResetPasswordView: View {
                         Spacer().frame(height: geometry.size.height * 0.35)
                         
                         VStack(spacing: 10) {
-                            GenericTitleAndSubtitleView(title: "Reset Password:", subtitle: "Confirm your details, then check your emails to reset your password").multilineTextAlignment(.center)
+                            GenericTitleAndSubtitleView(title: "Reset Password:", subtitle: "Confirm your details, then check your emails to reset your password", titleColour: Color.black).multilineTextAlignment(.center)
                                 
                         }
                         .padding(.bottom, 20)

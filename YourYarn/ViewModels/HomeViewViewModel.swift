@@ -5,7 +5,25 @@
 //  Created by Hana Mahmoud on 15/06/2024.
 //
 
+import FirebaseFirestore
 import Foundation
+
 class HomeViewViewModel: ObservableObject{
-    init() {}
+    
+    private let userID: String
+    
+    init(userId: String) {
+        self.userID = userId
+    }
+    
+    /// Delete wish list item
+    /// - Parameter id: item id to delete
+    func delete(id: String){
+        let db = Firestore.firestore()
+        db.collection("users")
+            .document(userID)
+            .collection("wishlistItems")
+            .document(id)
+            .delete()
+    }
 }
