@@ -15,15 +15,5 @@ class HomeViewViewModel: ObservableObject{
     init(userId: String) {
         self.userID = userId
     }
-    
-    /// Delete wish list item
-    /// - Parameter id: item id to delete
-    func delete(id: String){
-        let db = Firestore.firestore()
-        db.collection("users")
-            .document(userID)
-            .collection("wishlistItems")
-            .document(id)
-            .delete()
-    }
+
 }

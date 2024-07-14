@@ -54,6 +54,12 @@
 		D2BC72DC2C1DD76E001BC699 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC72DB2C1DD76E001BC699 /* LoginView.swift */; };
 		D2BC72DE2C1DDD65001BC699 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC72DD2C1DDD65001BC699 /* ResetPasswordView.swift */; };
 		D2FA75B42C41343500D48C43 /* ToggleItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA75B32C41343500D48C43 /* ToggleItemViewViewModel.swift */; };
+		D2FA75B62C43E52F00D48C43 /* TotalWishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA75B52C43E52F00D48C43 /* TotalWishlistView.swift */; };
+		D2FA75B82C43E54F00D48C43 /* TotalWishlistViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA75B72C43E54F00D48C43 /* TotalWishlistViewViewModel.swift */; };
+		D2FA75BA2C43E87500D48C43 /* HomePageSubtitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA75B92C43E87500D48C43 /* HomePageSubtitles.swift */; };
+		D2FA75BD2C441CDD00D48C43 /* TotalYarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA75BC2C441CDD00D48C43 /* TotalYarnView.swift */; };
+		D2FA75BF2C441CEE00D48C43 /* TotalToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA75BE2C441CEE00D48C43 /* TotalToolView.swift */; };
+		D2FA75C12C441D0100D48C43 /* TotalGraveYarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA75C02C441D0100D48C43 /* TotalGraveYarnView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +118,12 @@
 		D2BC72DB2C1DD76E001BC699 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D2BC72DD2C1DDD65001BC699 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		D2FA75B32C41343500D48C43 /* ToggleItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleItemViewViewModel.swift; sourceTree = "<group>"; };
+		D2FA75B52C43E52F00D48C43 /* TotalWishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalWishlistView.swift; sourceTree = "<group>"; };
+		D2FA75B72C43E54F00D48C43 /* TotalWishlistViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalWishlistViewViewModel.swift; sourceTree = "<group>"; };
+		D2FA75B92C43E87500D48C43 /* HomePageSubtitles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageSubtitles.swift; sourceTree = "<group>"; };
+		D2FA75BC2C441CDD00D48C43 /* TotalYarnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalYarnView.swift; sourceTree = "<group>"; };
+		D2FA75BE2C441CEE00D48C43 /* TotalToolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalToolView.swift; sourceTree = "<group>"; };
+		D2FA75C02C441D0100D48C43 /* TotalGraveYarnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalGraveYarnView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +156,7 @@
 				D2028B252C39914A00411D8D /* GenericTitleAndSubtitleView.swift */,
 				D2028B282C39944D00411D8D /* GenericFootnote.swift */,
 				D299A4FF2C3AAD3100D52361 /* GenericTitle.swift */,
+				D2FA75B92C43E87500D48C43 /* HomePageSubtitles.swift */,
 			);
 			path = GenericViews;
 			sourceTree = "<group>";
@@ -218,6 +231,10 @@
 				D2BC72B32C1DB25A001BC699 /* AddToolView.swift */,
 				D2BC72B52C1DB26D001BC699 /* AddWishListView.swift */,
 				D2BC72AD2C1DB205001BC699 /* SettingsView.swift */,
+				D2FA75B52C43E52F00D48C43 /* TotalWishlistView.swift */,
+				D2FA75BC2C441CDD00D48C43 /* TotalYarnView.swift */,
+				D2FA75BE2C441CEE00D48C43 /* TotalToolView.swift */,
+				D2FA75C02C441D0100D48C43 /* TotalGraveYarnView.swift */,
 				D2BC72BB2C1DB2FE001BC699 /* WishlistItemView.swift */,
 				D2BC72D92C1DCCB7001BC699 /* BackgroundView.swift */,
 				D28D32552C36E6B40025CC2C /* PopUpView.swift */,
@@ -240,6 +257,7 @@
 				D2BC72CD2C1DB3D9001BC699 /* AddToolViewViewModel.swift */,
 				D2BC72CF2C1DB3E7001BC699 /* AddWishListViewViewModel.swift */,
 				D2FA75B32C41343500D48C43 /* ToggleItemViewViewModel.swift */,
+				D2FA75B72C43E54F00D48C43 /* TotalWishlistViewViewModel.swift */,
 				D28D325B2C382EA40025CC2C /* Helper Funcions */,
 			);
 			path = ViewModels;
@@ -406,11 +424,15 @@
 				D2BC72B42C1DB25B001BC699 /* AddToolView.swift in Sources */,
 				D28D32562C36E6B40025CC2C /* PopUpView.swift in Sources */,
 				D2BC72C62C1DB3A8001BC699 /* MainViewViewModel.swift in Sources */,
+				D2FA75B62C43E52F00D48C43 /* TotalWishlistView.swift in Sources */,
+				D2FA75BD2C441CDD00D48C43 /* TotalYarnView.swift in Sources */,
 				D2028B292C39944D00411D8D /* GenericFootnote.swift in Sources */,
 				D2BC72B82C1DB293001BC699 /* OpeningView.swift in Sources */,
+				D2FA75BF2C441CEE00D48C43 /* TotalToolView.swift in Sources */,
 				D2BC72BC2C1DB2FE001BC699 /* WishlistItemView.swift in Sources */,
 				D2BC72CA2C1DB3C1001BC699 /* HomeViewViewModel.swift in Sources */,
 				D2FA75B42C41343500D48C43 /* ToggleItemViewViewModel.swift in Sources */,
+				D2FA75BA2C43E87500D48C43 /* HomePageSubtitles.swift in Sources */,
 				D2BC72DA2C1DCCB7001BC699 /* BackgroundView.swift in Sources */,
 				D2BC72902C1DAA62001BC699 /* YourYarnApp.swift in Sources */,
 				D2BC72C02C1DB34E001BC699 /* YarnItem.swift in Sources */,
@@ -419,9 +441,11 @@
 				D2BC72C82C1DB3B4001BC699 /* SettingsViewViewModel.swift in Sources */,
 				D2BC72D02C1DB3E7001BC699 /* AddWishListViewViewModel.swift in Sources */,
 				D2BC72CC2C1DB3CC001BC699 /* AddYarnViewViewModel.swift in Sources */,
+				D2FA75B82C43E54F00D48C43 /* TotalWishlistViewViewModel.swift in Sources */,
 				D2BC72D62C1DB408001BC699 /* WishlistItemViewViewModel.swift in Sources */,
 				D28D325F2C3837DD0025CC2C /* Database.swift in Sources */,
 				D2BC72BE2C1DB33C001BC699 /* User.swift in Sources */,
+				D2FA75C12C441D0100D48C43 /* TotalGraveYarnView.swift in Sources */,
 				D28D325A2C370ACA0025CC2C /* GenericNavigationView.swift in Sources */,
 				D2BC72C22C1DB35A001BC699 /* ToolItem.swift in Sources */,
 			);

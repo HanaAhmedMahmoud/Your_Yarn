@@ -84,14 +84,14 @@ struct SettingsView: View {
                         PopUpView(isActive: $isActive,
                                   title: "Delete Account?",
                                   message: "Are you sure you want to delete your account?",
-                                  buttonTitle: "Yes I'm sure", 
+                                  buttonTitle: "Yes I'm sure",
                                   buttonColour: BackgroundView().deletionColour,
                                   action: viewModel.deleteAccount)
                     }
                     
                 }.onAppear{
                     viewModel.fetchUser()
-            
+                    
                     
                 }
                 

@@ -9,11 +9,10 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var viewModel: HomeViewViewModel
-    @FirestoreQuery var items: [WishlistItem]
+    let userID: String
     
     init(userID: String){
-        self._items = FirestoreQuery(
-            collectionPath: "users/\(userID)/wishlistItems")
+        self.userID = userID
         self._viewModel = StateObject(
             wrappedValue: HomeViewViewModel(userId: userID))
     }
@@ -22,24 +21,11 @@ struct HomeView: View {
         NavigationView{
             ZStack{
                 BackgroundView().backgroundColour.ignoresSafeArea()
-                
-                //wishlist
                 VStack{
-                    GenericTitleAndSubtitleView(title: "Wishlist", subtitle: "See your current wishlist:", titleColour: BackgroundView().titleColour)
-                    VStack{
-                        List(items) {item in
-                            WishlistItemView(item: item)
-                                .swipeActions{
-                                    Button("Delete") {
-                                        viewModel.delete(id: item.id)
-                                    }.tint(BackgroundView().deletionColour)
-                                    
-                                }
-                        }.listStyle(PlainListStyle())
-                         .clipShape(RoundedRectangle(cornerRadius: 10))
-                            
-                    }
-                }.padding()
+                    //Wishlist view
+                    TotalWishlistView(userID: userID)
+                    Spacer()
+                }
                 
             }
             
