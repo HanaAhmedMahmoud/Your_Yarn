@@ -20,15 +20,12 @@ struct AddWishListView: View {
                         
                         GenericTitle(title: "Add to wishlist")
                         
-                        TextField("Enter item name:", text: $viewModel.itemName)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                        GenericSmallTextField(textDesc: "Enter item name", action: $viewModel.itemName)
                             .padding(.horizontal, geometry.size.width * 0.1)
                         
-                        TextField("Extra information:", text: $viewModel.itemDesc, axis: .vertical)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .lineLimit(5, reservesSpace: true)
+                        GenericLargeTextField(textDesc: "Extra information", action: $viewModel.itemDesc)
                             .padding(.horizontal, geometry.size.width * 0.1)
-                        
+
                         GenericButtonView(buttonText: "Add To Wishlist",
                                           buttonColour: BackgroundView().buttonColour,
                                           textColour: Color.white,

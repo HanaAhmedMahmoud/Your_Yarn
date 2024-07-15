@@ -47,22 +47,22 @@ class AddYarnViewViewModel : ObservableObject{
         }
         
         
-        //HANA CHANGE THIS, COME BACK HERE 
-        
         //Create a model
         let newID = UUID().uuidString
-        //let newItem = WishlistItem(id: newID,
-                                 //  yarnName: yarnName,
-                                   //yarnType: yarnType,
-                                 //  isBought: false)
+        let newItem = YarnItem(id: newID,
+                               yarnName: yarnName,
+                               yarnType: yarnType,
+                               yarnWeight: yarnWeight,
+                               yarnDesc: yarnDesc,
+                               isUsed: false)
         
         //Save model to database
         let db = Firestore.firestore()
         db.collection("users")
             .document(uID)
-            .collection("wishlistItems")
+            .collection("yarnItems")
             .document(newID)
-           // .setData(newItem.asDictionary())
+            .setData(newItem.asDictionary())
         
         successMessage = "Added to wishlist successfully"
         errorMessage = ""

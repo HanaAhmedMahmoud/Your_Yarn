@@ -56,10 +56,12 @@
 		D2FA75B42C41343500D48C43 /* ToggleItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA75B32C41343500D48C43 /* ToggleItemViewViewModel.swift */; };
 		D2FA75B62C43E52F00D48C43 /* TotalWishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA75B52C43E52F00D48C43 /* TotalWishlistView.swift */; };
 		D2FA75B82C43E54F00D48C43 /* TotalWishlistViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA75B72C43E54F00D48C43 /* TotalWishlistViewViewModel.swift */; };
-		D2FA75BA2C43E87500D48C43 /* HomePageSubtitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA75B92C43E87500D48C43 /* HomePageSubtitles.swift */; };
+		D2FA75BA2C43E87500D48C43 /* GenericHomePageSubtitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA75B92C43E87500D48C43 /* GenericHomePageSubtitles.swift */; };
 		D2FA75BD2C441CDD00D48C43 /* TotalYarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA75BC2C441CDD00D48C43 /* TotalYarnView.swift */; };
 		D2FA75BF2C441CEE00D48C43 /* TotalToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA75BE2C441CEE00D48C43 /* TotalToolView.swift */; };
 		D2FA75C12C441D0100D48C43 /* TotalGraveYarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA75C02C441D0100D48C43 /* TotalGraveYarnView.swift */; };
+		D2FA75C32C4562C200D48C43 /* GenericSmallTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA75C22C4562C200D48C43 /* GenericSmallTextField.swift */; };
+		D2FA75C52C4564F400D48C43 /* GenericLargeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA75C42C4564F400D48C43 /* GenericLargeTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,10 +122,12 @@
 		D2FA75B32C41343500D48C43 /* ToggleItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleItemViewViewModel.swift; sourceTree = "<group>"; };
 		D2FA75B52C43E52F00D48C43 /* TotalWishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalWishlistView.swift; sourceTree = "<group>"; };
 		D2FA75B72C43E54F00D48C43 /* TotalWishlistViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalWishlistViewViewModel.swift; sourceTree = "<group>"; };
-		D2FA75B92C43E87500D48C43 /* HomePageSubtitles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageSubtitles.swift; sourceTree = "<group>"; };
+		D2FA75B92C43E87500D48C43 /* GenericHomePageSubtitles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericHomePageSubtitles.swift; sourceTree = "<group>"; };
 		D2FA75BC2C441CDD00D48C43 /* TotalYarnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalYarnView.swift; sourceTree = "<group>"; };
 		D2FA75BE2C441CEE00D48C43 /* TotalToolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalToolView.swift; sourceTree = "<group>"; };
 		D2FA75C02C441D0100D48C43 /* TotalGraveYarnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalGraveYarnView.swift; sourceTree = "<group>"; };
+		D2FA75C22C4562C200D48C43 /* GenericSmallTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericSmallTextField.swift; sourceTree = "<group>"; };
+		D2FA75C42C4564F400D48C43 /* GenericLargeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericLargeTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +160,9 @@
 				D2028B252C39914A00411D8D /* GenericTitleAndSubtitleView.swift */,
 				D2028B282C39944D00411D8D /* GenericFootnote.swift */,
 				D299A4FF2C3AAD3100D52361 /* GenericTitle.swift */,
-				D2FA75B92C43E87500D48C43 /* HomePageSubtitles.swift */,
+				D2FA75B92C43E87500D48C43 /* GenericHomePageSubtitles.swift */,
+				D2FA75C22C4562C200D48C43 /* GenericSmallTextField.swift */,
+				D2FA75C42C4564F400D48C43 /* GenericLargeTextField.swift */,
 			);
 			path = GenericViews;
 			sourceTree = "<group>";
@@ -423,6 +429,7 @@
 				D2BC72DC2C1DD76E001BC699 /* LoginView.swift in Sources */,
 				D2BC72B42C1DB25B001BC699 /* AddToolView.swift in Sources */,
 				D28D32562C36E6B40025CC2C /* PopUpView.swift in Sources */,
+				D2FA75C52C4564F400D48C43 /* GenericLargeTextField.swift in Sources */,
 				D2BC72C62C1DB3A8001BC699 /* MainViewViewModel.swift in Sources */,
 				D2FA75B62C43E52F00D48C43 /* TotalWishlistView.swift in Sources */,
 				D2FA75BD2C441CDD00D48C43 /* TotalYarnView.swift in Sources */,
@@ -432,7 +439,8 @@
 				D2BC72BC2C1DB2FE001BC699 /* WishlistItemView.swift in Sources */,
 				D2BC72CA2C1DB3C1001BC699 /* HomeViewViewModel.swift in Sources */,
 				D2FA75B42C41343500D48C43 /* ToggleItemViewViewModel.swift in Sources */,
-				D2FA75BA2C43E87500D48C43 /* HomePageSubtitles.swift in Sources */,
+				D2FA75BA2C43E87500D48C43 /* GenericHomePageSubtitles.swift in Sources */,
+				D2FA75C32C4562C200D48C43 /* GenericSmallTextField.swift in Sources */,
 				D2BC72DA2C1DCCB7001BC699 /* BackgroundView.swift in Sources */,
 				D2BC72902C1DAA62001BC699 /* YourYarnApp.swift in Sources */,
 				D2BC72C02C1DB34E001BC699 /* YarnItem.swift in Sources */,

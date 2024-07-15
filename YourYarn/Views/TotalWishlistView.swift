@@ -23,7 +23,7 @@ struct TotalWishlistView: View {
             
             //wishlist
             VStack{
-                HomePageSubtitles(title: "Wishlist", subtitle: "See your current wishlist:", titleColour: BackgroundView().titleColour)
+                GenericHomePageSubtitles(title: "Wishlist", subtitle: "See your current wishlist:", titleColour: BackgroundView().titleColour)
                 VStack{
                     List(items) {item in
                         WishlistItemView(item: item)

@@ -16,45 +16,65 @@ struct AddYarnView: View {
                     BackgroundView().backgroundColour.ignoresSafeArea()
                     VStack{
                         
-                        Spacer().frame(height: geometry.size.height * 0.05)
-                        
                         GenericTitle(title: "Add to Yarn Collection")
                         
-                        TextField("Enter yarn name:", text: $viewModel.yarnName)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .padding(.horizontal, geometry.size.width * 0.1)
+                        //camera icon 
+                        ZStack{
+                            Rectangle()
+                                .fill(Color.gray)
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.white, lineWidth: 1)
+                                )
+                                .padding(.bottom)
+                                .padding(.horizontal, geometry.size.width * 0.1)
+                                
+                            VStack{
+                                Image(systemName: "camera")
+                                    .foregroundStyle(Color.white)
+                                    .font(.system(size: 72))
+                            }
+                            
+                        }.frame(height: geometry.size.height * 0.4)
                         
-                        TextField("Enter yarn type:", text: $viewModel.yarnType)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .padding(.horizontal, geometry.size.width * 0.1)
                         
-                        TextField("Enter yarn weight:", text: $viewModel.yarnWeight)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .padding(.horizontal, geometry.size.width * 0.1)
+                        VStack{
+                            GenericSmallTextField(textDesc: "Enter yarn name", action: $viewModel.yarnName)
+                                .padding(.horizontal, geometry.size.width * 0.1)
+                            
+                            GenericSmallTextField(textDesc: "Enter yarn type", action: $viewModel.yarnType)
+                                .padding(.horizontal, geometry.size.width * 0.1)
+                            
+                            GenericSmallTextField(textDesc: "Enter yarn weight", action: $viewModel.yarnWeight)
+                                .padding(.horizontal, geometry.size.width * 0.1)
+
+                            GenericLargeTextField(textDesc: "Extra information", action: $viewModel.yarnDesc)
+                                .padding(.horizontal, geometry.size.width * 0.1)
+                            
+                            GenericButtonView(buttonText: "Add To Collection",
+                                              buttonColour: BackgroundView().buttonColour,
+                                              textColour: Color.white,
+                                              buttonOutline: Color.white,
+                                              action: viewModel.addToWishlist)
+                            .padding(.horizontal)
+                            .padding(.top, 5)
+                        }.frame(height: geometry.size.height * 0.4)
                         
                         
-                        TextField("Extra information:", text: $viewModel.yarnDesc)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .padding(.horizontal, geometry.size.width * 0.1)
+                        VStack{
+                            if !viewModel.errorMessage.isEmpty{
+                                Text(viewModel.errorMessage).foregroundStyle(Color.red).padding(.horizontal, geometry.size.width * 0.1)
+                            }
+                            if !viewModel.successMessage.isEmpty{
+                                Text(viewModel.successMessage).foregroundStyle(Color.green)
+                            }
+                        }.frame(height: geometry.size.height * 0.1)
+                            .padding(.bottom, 10)
+    
+                            
                         
-                        
-                        
-                        GenericButtonView(buttonText: "Add To Collection",
-                                          buttonColour: BackgroundView().buttonColour,
-                                          textColour: Color.white,
-                                          buttonOutline: Color.white,
-                                          action: viewModel.addToWishlist)
-                        .padding()
-                        
-                        if !viewModel.errorMessage.isEmpty{
-                            Text(viewModel.errorMessage).foregroundStyle(Color.red).padding(.horizontal, geometry.size.width * 0.1)
-                        }
-                        
-                        if !viewModel.successMessage.isEmpty{
-                            Text(viewModel.successMessage).foregroundStyle(Color.green)
-                        }
-                        
-                        Spacer()
+
                         
                     }
                 }
