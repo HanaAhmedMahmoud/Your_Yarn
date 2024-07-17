@@ -62,6 +62,7 @@
 		D2FA75C12C441D0100D48C43 /* TotalGraveYarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA75C02C441D0100D48C43 /* TotalGraveYarnView.swift */; };
 		D2FA75C32C4562C200D48C43 /* GenericSmallTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA75C22C4562C200D48C43 /* GenericSmallTextField.swift */; };
 		D2FA75C52C4564F400D48C43 /* GenericLargeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA75C42C4564F400D48C43 /* GenericLargeTextField.swift */; };
+		D2FA75C72C47C92300D48C43 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FA75C62C47C92300D48C43 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		D2FA75C02C441D0100D48C43 /* TotalGraveYarnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalGraveYarnView.swift; sourceTree = "<group>"; };
 		D2FA75C22C4562C200D48C43 /* GenericSmallTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericSmallTextField.swift; sourceTree = "<group>"; };
 		D2FA75C42C4564F400D48C43 /* GenericLargeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericLargeTextField.swift; sourceTree = "<group>"; };
+		D2FA75C62C47C92300D48C43 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 			children = (
 				D28D325C2C382EC40025CC2C /* Validate.swift */,
 				D28D325E2C3837DD0025CC2C /* Database.swift */,
+				D2FA75C62C47C92300D48C43 /* ImagePicker.swift */,
 			);
 			path = "Helper Funcions";
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D28D325D2C382EC40025CC2C /* Validate.swift in Sources */,
+				D2FA75C72C47C92300D48C43 /* ImagePicker.swift in Sources */,
 				D2BC72922C1DAA62001BC699 /* MainView.swift in Sources */,
 				D26716CD2C2EDCEE00DED689 /* TabItemView.swift in Sources */,
 				D2B821BA2C29BA52000E0E3A /* Extensions.swift in Sources */,

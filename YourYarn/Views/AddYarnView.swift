@@ -9,37 +9,62 @@ import SwiftUI
 
 struct AddYarnView: View {
     @StateObject var viewModel = AddYarnViewViewModel()
+    
+    // For camera view
+    @State var isPickerShowing = false
+    @State var selectedImage: UIImage? = nil
+    
     var body: some View {
         GeometryReader { geometry in
-            NavigationView{
-                ZStack{
+            NavigationView {
+                ZStack {
                     BackgroundView().backgroundColour.ignoresSafeArea()
-                    VStack{
+                    VStack {
                         
                         GenericTitle(title: "Add to Yarn Collection")
+                            .padding(.top, 10)
                         
-                        //camera icon 
-                        ZStack{
-                            Rectangle()
-                                .fill(Color.gray)
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 10)
-                                        .stroke(Color.white, lineWidth: 1)
-                                )
-                                .padding(.bottom)
-                                .padding(.horizontal, geometry.size.width * 0.1)
-                                
-                            VStack{
-                                Image(systemName: "camera")
-                                    .foregroundStyle(Color.white)
-                                    .font(.system(size: 72))
+                        // Camera icon or selected image
+                        VStack {
+                            if let selectedImage = selectedImage {
+                                Image(uiImage: selectedImage)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(height: geometry.size.height * 0.3)
+                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                                    .padding(.horizontal, geometry.size.width * 0.1)
+                                    .padding(.bottom, 10)
+                            } else {
+                                Button(action: {
+                                    // Show the image picker
+                                    isPickerShowing = true
+                                }) {
+                                    ZStack {
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .fill(Color.gray)
+                                            .frame(height: geometry.size.height * 0.3)
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .stroke(Color.white, lineWidth: 1)
+                                            )
+                                            .padding(.horizontal, geometry.size.width * 0.1)
+                                        
+                                        VStack {
+                                            Image(systemName: "camera")
+                                                .foregroundColor(.white)
+                                                .font(.system(size: 72))
+                                        }
+                                    }
+                                }
+                                .padding(.bottom, 10)
                             }
-                            
-                        }.frame(height: geometry.size.height * 0.4)
+                        }
+                        .sheet(isPresented: $isPickerShowing, onDismiss: nil) {
+                            // Image picker
+                            ImagePicker(selectedImage: $selectedImage, isPickerShowing: $isPickerShowing)
+                        }
                         
-                        
-                        VStack{
+                        VStack {
                             GenericSmallTextField(textDesc: "Enter yarn name", action: $viewModel.yarnName)
                                 .padding(.horizontal, geometry.size.width * 0.1)
                             
@@ -48,7 +73,7 @@ struct AddYarnView: View {
                             
                             GenericSmallTextField(textDesc: "Enter yarn weight", action: $viewModel.yarnWeight)
                                 .padding(.horizontal, geometry.size.width * 0.1)
-
+                            
                             GenericLargeTextField(textDesc: "Extra information", action: $viewModel.yarnDesc)
                                 .padding(.horizontal, geometry.size.width * 0.1)
                             
@@ -57,26 +82,25 @@ struct AddYarnView: View {
                                               textColour: Color.white,
                                               buttonOutline: Color.white,
                                               action: viewModel.addToWishlist)
-                            .padding(.horizontal)
-                            .padding(.top, 5)
-                        }.frame(height: geometry.size.height * 0.4)
+                                .padding(.horizontal, geometry.size.width * 0.1)
+                                .padding(.top, 5)
+                        }
                         
-                        
-                        VStack{
-                            if !viewModel.errorMessage.isEmpty{
-                                Text(viewModel.errorMessage).foregroundStyle(Color.red).padding(.horizontal, geometry.size.width * 0.1)
+                        VStack {
+                            if !viewModel.errorMessage.isEmpty {
+                                Text(viewModel.errorMessage)
+                                    .foregroundColor(.red)
+                                    .padding(.horizontal, geometry.size.width * 0.1)
                             }
-                            if !viewModel.successMessage.isEmpty{
-                                Text(viewModel.successMessage).foregroundStyle(Color.green)
+                            if !viewModel.successMessage.isEmpty {
+                                Text(viewModel.successMessage)
+                                    .foregroundColor(.green)
+                                    .padding(.horizontal, geometry.size.width * 0.1)
                             }
-                        }.frame(height: geometry.size.height * 0.1)
-                            .padding(.bottom, 10)
-    
-                            
-                        
-
-                        
+                        }
+                        .padding(.bottom, 10)
                     }
+                    .padding(.horizontal, geometry.size.width * 0.05)
                 }
             }
         }
@@ -86,3 +110,4 @@ struct AddYarnView: View {
 #Preview {
     AddYarnView()
 }
+

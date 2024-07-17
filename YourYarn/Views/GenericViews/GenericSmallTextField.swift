@@ -21,6 +21,8 @@ struct GenericSmallTextField_Previews: PreviewProvider {
     @State static var yarnName = "Sample Yarn"
 
     static var previews: some View {
-        GenericSmallTextField(textDesc: "Name", action: $yarnName)
+        Group {
+            GenericSmallTextField(textDesc: "Name", action: $yarnName)
+        }
     }
 }
