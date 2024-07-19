@@ -29,7 +29,12 @@ struct TotalYarnView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     if viewModel.retrievedImages.isEmpty {
-                        Text("Loading images...")
+                        VStack{
+                                Text("Loading images...")
+                                    .foregroundStyle(Color.gray)
+                                Spacer()
+                        }.frame(width: 150, height: 150)
+
                     } else {
                         ForEach(Array(zip(items, viewModel.retrievedImages)), id: \.0.id) { (item, image) in
                             YarnItemView(item: item, image: image)
@@ -40,7 +45,7 @@ struct TotalYarnView: View {
                     viewModel.retrieveYarnPhotos()
                 }
             }
-        }
+        }.padding()
     }
 }
 
