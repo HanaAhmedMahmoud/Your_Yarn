@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct YarnItemView: View {
+    
+    @StateObject var viewModel = YarnViewViewModel()
+    @State var isActive: Bool = false
+    
     let item: YarnItem
     let image: UIImage
     
     var body: some View {
         Button{
-            //all of yarn info is shown! pop up view needs to be created 
+            //all of yarn info is shown! pop up view needs to be created
+            isActive = true
         } label: {
             ZStack{
                 RoundedRectangle(cornerRadius: 10)
@@ -38,6 +43,12 @@ struct YarnItemView: View {
                         .foregroundStyle(Color(.secondaryLabel))
 
                 }.padding()
+                
+                if isActive {
+                    ZoomedYarnView(isActive: $isActive, item: item, image: image, action: {
+                        print("make a delete yarn thing")
+                    })
+                }
             }
         }
     }

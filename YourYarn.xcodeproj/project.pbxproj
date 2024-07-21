@@ -11,6 +11,8 @@
 		D2028B292C39944D00411D8D /* GenericFootnote.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2028B282C39944D00411D8D /* GenericFootnote.swift */; };
 		D2028B312C399EFC00411D8D /* YourYarnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2028B302C399EFC00411D8D /* YourYarnUITests.swift */; };
 		D2028B332C399EFC00411D8D /* YourYarnUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2028B322C399EFC00411D8D /* YourYarnUITestsLaunchTests.swift */; };
+		D20D620E2C4D169600435348 /* ZoomedYarnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D620D2C4D169600435348 /* ZoomedYarnView.swift */; };
+		D20D62102C4D1C4A00435348 /* YarnViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20D620F2C4D1C4A00435348 /* YarnViewViewModel.swift */; };
 		D26716CD2C2EDCEE00DED689 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26716CC2C2EDCED00DED689 /* TabItemView.swift */; };
 		D26716D12C31904800DED689 /* ResetPasswordViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26716D02C31904800DED689 /* ResetPasswordViewViewModel.swift */; };
 		D28D32562C36E6B40025CC2C /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D32552C36E6B40025CC2C /* PopUpView.swift */; };
@@ -83,6 +85,8 @@
 		D2028B2E2C399EFC00411D8D /* YourYarnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YourYarnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2028B302C399EFC00411D8D /* YourYarnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourYarnUITests.swift; sourceTree = "<group>"; };
 		D2028B322C399EFC00411D8D /* YourYarnUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourYarnUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D20D620D2C4D169600435348 /* ZoomedYarnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomedYarnView.swift; sourceTree = "<group>"; };
+		D20D620F2C4D1C4A00435348 /* YarnViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YarnViewViewModel.swift; sourceTree = "<group>"; };
 		D26716CC2C2EDCED00DED689 /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		D26716D02C31904800DED689 /* ResetPasswordViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewViewModel.swift; sourceTree = "<group>"; };
 		D28D32552C36E6B40025CC2C /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
@@ -271,6 +275,7 @@
 				D2FA75B32C41343500D48C43 /* ToggleItemViewViewModel.swift */,
 				D2FA75B72C43E54F00D48C43 /* TotalWishlistViewViewModel.swift */,
 				D2FA75CF2C495E4C00D48C43 /* TotalYarnViewViewModel.swift */,
+				D20D620F2C4D1C4A00435348 /* YarnViewViewModel.swift */,
 				D28D325B2C382EA40025CC2C /* Helper Funcions */,
 			);
 			path = ViewModels;
@@ -310,6 +315,7 @@
 			children = (
 				D2FA75D12C4971F800D48C43 /* YarnItemView.swift */,
 				D2BC72BB2C1DB2FE001BC699 /* WishlistItemView.swift */,
+				D20D620D2C4D169600435348 /* ZoomedYarnView.swift */,
 			);
 			path = "Item Views";
 			sourceTree = "<group>";
@@ -476,11 +482,13 @@
 				D2BC72CA2C1DB3C1001BC699 /* HomeViewViewModel.swift in Sources */,
 				D2FA75B42C41343500D48C43 /* ToggleItemViewViewModel.swift in Sources */,
 				D2FA75BA2C43E87500D48C43 /* GenericHomePageSubtitles.swift in Sources */,
+				D20D62102C4D1C4A00435348 /* YarnViewViewModel.swift in Sources */,
 				D2FA75C32C4562C200D48C43 /* GenericSmallTextField.swift in Sources */,
 				D2BC72DA2C1DCCB7001BC699 /* BackgroundView.swift in Sources */,
 				D2BC72902C1DAA62001BC699 /* YourYarnApp.swift in Sources */,
 				D2BC72C02C1DB34E001BC699 /* YarnItem.swift in Sources */,
 				D26716D12C31904800DED689 /* ResetPasswordViewViewModel.swift in Sources */,
+				D20D620E2C4D169600435348 /* ZoomedYarnView.swift in Sources */,
 				D2BC72DE2C1DDD65001BC699 /* ResetPasswordView.swift in Sources */,
 				D2BC72C82C1DB3B4001BC699 /* SettingsViewViewModel.swift in Sources */,
 				D2BC72D02C1DB3E7001BC699 /* AddWishListViewViewModel.swift in Sources */,
