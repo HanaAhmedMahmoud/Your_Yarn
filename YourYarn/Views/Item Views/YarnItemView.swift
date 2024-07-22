@@ -17,7 +17,6 @@ struct YarnItemView: View {
     
     var body: some View {
         Button{
-            //all of yarn info is shown! pop up view needs to be created
             isActive = true
         } label: {
             ZStack{
@@ -28,21 +27,29 @@ struct YarnItemView: View {
                             .stroke(Color.white, lineWidth: 1))
                     .frame(width: 150, height: 200)
 
-                VStack(alignment: .leading){
+                VStack{
                     Image(uiImage: image)
                         .resizable()
-                        .frame(width: 130, height: 130)
+                        .frame(width: 125, height: 125)
                         .clipShape(RoundedRectangle(cornerRadius:10))
+                        .padding(.top, 10)
+                        .padding(.bottom, 5)
                     
                     Text(item.yarnName)
                         .font(.body)
                         .foregroundStyle(BackgroundView().titleColour)
+                        .lineLimit(1)
+                        .truncationMode(.tail)
+                        .frame(width: 130, height: 10, alignment: .leading)
                     
                     Text(item.yarnDesc)
                         .font(.footnote)
                         .foregroundStyle(Color(.secondaryLabel))
+                        .lineLimit(2)
+                        .truncationMode(.tail)
+                        .frame(width: 130, height: 35, alignment: .topLeading)
 
-                }.padding()
+                }.padding(.horizontal)
                 
                 if isActive {
                     ZoomedYarnView(isActive: $isActive, item: item, image: image, action: {

@@ -6,6 +6,7 @@
 //
 
 import FirebaseFirestore
+import FirebaseAuth
 import Foundation
 
 class HomeViewViewModel: ObservableObject{
@@ -14,6 +15,17 @@ class HomeViewViewModel: ObservableObject{
     
     init(userId: String) {
         self.userID = userId
+    }
+    
+    func getUsername() -> String {
+        
+        //get user ID
+        guard let uID = Auth.auth().currentUser?.uid else { return ""}
+        
+        // Get the data from the database
+        let db = Firestore.firestore()
+        
+        return "will return username" 
     }
 
 }

@@ -23,6 +23,8 @@ struct HomeView: View {
                 BackgroundView().backgroundColour.ignoresSafeArea()
                 VStack{
                     Spacer()
+                    GenericTitle(title: "Welcome @")
+                    Spacer()
                     TotalYarnView(userID: userID)
                     Spacer()
                     TotalWishlistView(userID: userID)

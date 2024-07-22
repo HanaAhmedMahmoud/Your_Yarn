@@ -20,6 +20,7 @@ class TotalYarnViewViewModel: ObservableObject {
         self.userID = userId
     }
     
+
     func retrieveYarnPhotos() {
         //get user ID
         guard let uID = Auth.auth().currentUser?.uid else { return }

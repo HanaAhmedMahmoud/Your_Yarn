@@ -29,7 +29,7 @@ struct ZoomedYarnView: View {
                 
                 Image(uiImage: image)
                     .resizable()
-                    .frame(width: 200, height: 200)
+                    .frame(width: 175, height: 175)
                     .clipShape(RoundedRectangle(cornerRadius:10))
                     .padding()
                 
@@ -40,31 +40,43 @@ struct ZoomedYarnView: View {
                         GridRow{
                             Text("Yarn name: ")
                                 .bold()
+                                .foregroundStyle(BackgroundView().titleColour)
                             Text(item.yarnName)
+                                .foregroundStyle(Color.black)
                         }
                         
                         GridRow{
                             Text("Yarn type: ")
                                 .bold()
+                                .foregroundStyle(BackgroundView().titleColour)
                             Text(item.yarnType)
+                                .foregroundStyle(Color.black)
                         }
                         
                         GridRow{
                             Text("Yarn weight: ")
                                 .bold()
+                                .foregroundStyle(BackgroundView().titleColour)
                             Text(item.yarnWeight)
+                                .foregroundStyle(Color.black)
                         }
                         
                         GridRow{
-                            Text("Extra information: ")
+                            Text("Description: ")
                                 .bold()
+                                .foregroundStyle(BackgroundView().titleColour)
                             Text(item.yarnDesc)
+                                .foregroundStyle(Color.black)
+                            
                         }
                         
-                    }.foregroundStyle(Color.black)
+                    }
+                     .lineLimit(2)
+                     .frame(width: 250, height: 150, alignment: .leading)
+                     .font(.system(size: 15))
                 }
             }.padding()
-            .fixedSize(horizontal: false, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+            .frame(width: 300, height: 400)
             .background(Color.white)
             .clipShape(RoundedRectangle(cornerRadius: 20))
             .overlay{
@@ -87,7 +99,7 @@ struct ZoomedYarnView: View {
             }
         }.ignoresSafeArea()
     
-        }
+    }
            
     func close() {
         isActive = false
