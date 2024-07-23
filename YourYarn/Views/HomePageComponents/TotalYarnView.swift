@@ -13,10 +13,10 @@ struct TotalYarnView: View {
     @FirestoreQuery var items: [YarnItem]
     
     init(userID: String) {
+        self._viewModel = StateObject(wrappedValue: TotalYarnViewViewModel(userId: userID))
         self._items = FirestoreQuery(
-            collectionPath: "users/\(userID)/yarnItems")
-        self._viewModel = StateObject(
-            wrappedValue: TotalYarnViewViewModel(userId: userID))
+            collectionPath: "users/\(userID)/yarnItems"
+        )
     }
     
     var body: some View {
@@ -24,20 +24,22 @@ struct TotalYarnView: View {
             GenericHomePageSubtitles(
                 title: "Yarns and Wools",
                 subtitle: "Browse yarns and wools in your collection",
-                titleColour: BackgroundView().titleColour)
+                titleColour: BackgroundView().titleColour
+            )
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     if viewModel.retrievedImages.isEmpty {
-                        VStack{
-                                Text("Loading images...")
-                                    .foregroundStyle(Color.gray)
-                                Spacer()
-                        }.frame(width: 150, height: 150)
-
+                        VStack {
+                            Text("Loading images...")
+                                .foregroundStyle(Color.gray)
+                            Spacer()
+                        }
+                        .frame(width: 150, height: 150)
                     } else {
-                        ForEach(Array(zip(items, viewModel.retrievedImages)), id: \.0.id) { (item, image) in
-                            YarnItemView(item: item, image: image)
+                        ForEach(items) {item in
+                            viewModel.setYarnPhoto(yarnId: item.id)
+                            YarnItemView(item: item, image: viewModel.$yarnImage)
                         }
                     }
                 }
@@ -45,9 +47,11 @@ struct TotalYarnView: View {
                     viewModel.retrieveYarnPhotos()
                 }
             }
-        }.padding()
+        }
+        .padding()
     }
 }
+
 
 #Preview {
     TotalYarnView(userID: "5STjZ0KXl2PT33yDjifv21u3NaE3")

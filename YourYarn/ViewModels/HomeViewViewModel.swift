@@ -17,15 +17,4 @@ class HomeViewViewModel: ObservableObject{
         self.userID = userId
     }
     
-    func getUsername() -> String {
-        
-        //get user ID
-        guard let uID = Auth.auth().currentUser?.uid else { return ""}
-        
-        // Get the data from the database
-        let db = Firestore.firestore()
-        
-        return "will return username" 
-    }
-
 }

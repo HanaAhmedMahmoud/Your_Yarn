@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var viewModel: HomeViewViewModel
+    @StateObject var dbFuncs =  UserDBFunctions()
+    
     let userID: String
     
     init(userID: String){
@@ -23,7 +25,7 @@ struct HomeView: View {
                 BackgroundView().backgroundColour.ignoresSafeArea()
                 VStack{
                     Spacer()
-                    GenericTitle(title: "Welcome @")
+                    GenericTitle(title: "Welcome @" + dbFuncs.getUsername())
                     Spacer()
                     TotalYarnView(userID: userID)
                     Spacer()
