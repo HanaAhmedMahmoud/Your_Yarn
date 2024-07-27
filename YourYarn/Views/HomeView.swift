@@ -23,15 +23,18 @@ struct HomeView: View {
         NavigationView{
             ZStack{
                 BackgroundView().backgroundColour.ignoresSafeArea()
-                VStack{
-                    Spacer()
-                    GenericTitle(title: "Welcome @" + dbFuncs.getUsername())
-                    Spacer()
-                    TotalYarnView(userID: userID)
-                    Spacer()
-                    TotalWishlistView(userID: userID)
-                    Spacer()
+                ScrollView{
+                    VStack{
+                        Spacer()
+                        GenericTitle(title: "Welcome @" + dbFuncs.getUsername())
+                        Spacer()
+                        TotalYarnView(userID: userID)
+                        Spacer()
+                        TotalWishlistView(userID: userID)
+                        Spacer()
+                    }
                 }
+                
                 
             }
             

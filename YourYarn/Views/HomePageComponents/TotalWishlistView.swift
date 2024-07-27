@@ -19,28 +19,23 @@ struct TotalWishlistView: View {
     }
     
     var body: some View {
-        GeometryReader { geometry in
-            
-            //wishlist
+        //wishlist
+        VStack{
+            GenericHomePageSubtitles(title: "Wishlist", subtitle: "See your current wishlist:", titleColour: BackgroundView().titleColour)
             VStack{
-                GenericHomePageSubtitles(title: "Wishlist", subtitle: "See your current wishlist:", titleColour: BackgroundView().titleColour)
-                VStack{
-                    List(items) {item in
-                        WishlistItemView(item: item)
-                            .swipeActions{
-                                Button("Delete") {
-                                    viewModel.delete(id: item.id)
-                                }.tint(BackgroundView().deletionColour)
-                                
-                            }
-                    }.listStyle(PlainListStyle())
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .frame(height: geometry.size.height * 0.3) //make fill 0.3 of screen
-                    
-                }
-            }.padding()
-        }
-        
+                List(items) {item in
+                    WishlistItemView(item: item)
+                        .swipeActions{
+                            Button("Delete") {
+                                viewModel.delete(id: item.id)
+                            }.tint(BackgroundView().deletionColour)
+                            
+                        }
+                }.listStyle(PlainListStyle())
+                    .frame(height: 200)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+            }
+        }.padding()
     }
     
 }

@@ -12,6 +12,7 @@ struct TotalYarnView: View {
     @StateObject var viewModel: TotalYarnViewViewModel
     @FirestoreQuery var items: [YarnItem]
     
+    
     init(userID: String) {
         self._viewModel = StateObject(wrappedValue: TotalYarnViewViewModel(userId: userID))
         self._items = FirestoreQuery(
@@ -29,17 +30,16 @@ struct TotalYarnView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    if viewModel.retrievedImages.isEmpty {
+                    if viewModel.imageDictionary.isEmpty {
                         VStack {
                             Text("Loading images...")
                                 .foregroundStyle(Color.gray)
                             Spacer()
                         }
-                        .frame(width: 150, height: 150)
+                        .frame(width: 150, height: 200)
                     } else {
                         ForEach(items) {item in
-                            viewModel.setYarnPhoto(yarnId: item.id)
-                            YarnItemView(item: item, image: viewModel.$yarnImage)
+                            YarnItemView(item: item, image: viewModel.imageDictionary[item.yarnImage] ?? UIImage(named: "Loading")! )
                         }
                     }
                 }
