@@ -43,12 +43,13 @@ struct TotalYarnView: View {
                         }
                     }
                 }
-                .onAppear {
-                    viewModel.retrieveYarnPhotos()
-                }
+                
             }
         }
         .padding()
+        .onAppear {
+            viewModel.retrieveYarnPhotos()
+        }
     }
 }
 
