@@ -17,6 +17,7 @@ struct GenericTitle: View {
             .foregroundStyle(BackgroundView().titleColour)
             .padding()
     }
+    
 }
 
 #Preview {

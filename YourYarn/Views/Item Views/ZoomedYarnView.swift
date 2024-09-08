@@ -27,23 +27,12 @@ struct ZoomedYarnView: View {
             
             VStack{
                 
-                Image(uiImage: image)
-                    .resizable()
-                    .frame(width: 175, height: 175)
-                    .clipShape(RoundedRectangle(cornerRadius:10))
-                    .padding()
+                GenericTitle(title: item.yarnName)
+                    .frame(maxWidth: .infinity, alignment: .center)
                 
-                VStack(alignment: .leading){
                     Grid(alignment: .leadingFirstTextBaseline,
                          horizontalSpacing: 10,
                          verticalSpacing: 15){
-                        GridRow{
-                            Text("Yarn name: ")
-                                .bold()
-                                .foregroundStyle(BackgroundView().titleColour)
-                            Text(item.yarnName)
-                                .foregroundStyle(Color.black)
-                        }
                         
                         GridRow{
                             Text("Yarn type: ")
@@ -65,18 +54,29 @@ struct ZoomedYarnView: View {
                             Text("Description: ")
                                 .bold()
                                 .foregroundStyle(BackgroundView().titleColour)
-                            Text(item.yarnDesc)
-                                .foregroundStyle(Color.black)
-                            
                         }
                         
+                        ScrollView {
+                            Text(item.yarnDesc)
+                                .foregroundStyle(Color.black)
+                        }
+                        .defaultScrollAnchor(.bottom)
+                        
                     }
-                     .lineLimit(2)
                      .frame(width: 250, height: 150, alignment: .leading)
                      .font(.system(size: 15))
+                
+                
+                HStack{
+                    
+                    GenericButtonView(buttonText: "Edit", buttonColour: BackgroundView().backgroundColour, textColour: BackgroundView().titleColour, buttonOutline: BackgroundView().titleColour, action: editPressed)
+                    
+                    GenericButtonView(buttonText: "Delete", buttonColour: BackgroundView().deletionColour, textColour: Color.white, buttonOutline: Color.black, action: deletePressed)
+                    
                 }
+                
             }.padding()
-            .frame(width: 300, height: 400)
+            .frame(width: 300, height: 350)
             .background(Color.white)
             .clipShape(RoundedRectangle(cornerRadius: 20))
             .overlay{
@@ -103,6 +103,14 @@ struct ZoomedYarnView: View {
            
     func close() {
         isActive = false
+    }
+    
+    func editPressed() {
+        
+    }
+    
+    func deletePressed() {
+        
     }
 }
 
