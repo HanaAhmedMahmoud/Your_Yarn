@@ -69,8 +69,4 @@ class TotalYarnViewViewModel: ObservableObject {
             }
     }
     
-    
-    func editYarns() {
-        
-    }
 }

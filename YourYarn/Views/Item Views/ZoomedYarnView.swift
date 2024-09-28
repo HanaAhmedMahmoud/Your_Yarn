@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ZoomedYarnView: View {
     
+    @StateObject var viewModel = YarnViewViewModel()
     @Binding var isActive: Bool
+    @State var edit = false
     
     let item: YarnItem
     let image: UIImage
@@ -27,9 +29,14 @@ struct ZoomedYarnView: View {
             
             VStack{
                 
-                GenericTitle(title: item.yarnName)
-                    .frame(maxWidth: .infinity, alignment: .center)
-                
+                //if the edit button is not pressed
+                if !edit{
+                    
+                    //Title
+                    GenericTitle(title: item.yarnName)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                    
+                    //Generic title
                     Grid(alignment: .leadingFirstTextBaseline,
                          horizontalSpacing: 10,
                          verticalSpacing: 15){
@@ -65,12 +72,39 @@ struct ZoomedYarnView: View {
                     }
                      .frame(width: 250, height: 150, alignment: .leading)
                      .font(.system(size: 15))
+                }
                 
+                //if the edit button not pressed
+                else{
+                    // Title
+                    GenericTitle(title: "Edit below")
+                        .frame(maxWidth: .infinity, alignment: .center)
+                    
+                    // TextFields
+                    VStack(spacing: 10) {
+                        GenericSmallTextField(textDesc: "Enter new yarn name", action: $viewModel.yarnName)
+                        
+                        GenericSmallTextField(textDesc: "Enter new yarn weight", action: $viewModel.yarnWeight)
+                        
+                        GenericLargeTextField(textDesc: "Enter new yarn description", action: $viewModel.yarnDesc)
+                    }
+                    .frame(width: 250)
+                    .font(.system(size: 15))
+                }
                 
                 HStack{
                     
-                    GenericButtonView(buttonText: "Edit", buttonColour: BackgroundView().backgroundColour, textColour: BackgroundView().titleColour, buttonOutline: BackgroundView().titleColour, action: editPressed)
+                    if !edit{
+                        //Show edit button
+                        GenericButtonView(buttonText: "Edit", buttonColour: BackgroundView().backgroundColour, textColour: BackgroundView().titleColour, buttonOutline: BackgroundView().titleColour, action: editPressed)
+                    }
+                    else{
+                        //Show done button
+                        GenericButtonView(buttonText: "Done", buttonColour: BackgroundView().backgroundColour, textColour: BackgroundView().titleColour, buttonOutline: BackgroundView().titleColour, action: donePressed)
+                    }
+
                     
+                    //Delete button
                     GenericButtonView(buttonText: "Delete", buttonColour: BackgroundView().deletionColour, textColour: Color.white, buttonOutline: Color.black, action: deletePressed)
                     
                 }
@@ -105,12 +139,17 @@ struct ZoomedYarnView: View {
         isActive = false
     }
     
-    func editPressed() {
-        
-    }
     
     func deletePressed() {
         
+    }
+    
+    func editPressed() {
+        edit = true
+    }
+    
+    func donePressed() {
+        edit = false
     }
 }
 
