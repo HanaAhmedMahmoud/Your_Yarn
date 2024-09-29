@@ -74,7 +74,7 @@ struct ZoomedYarnView: View {
                      .font(.system(size: 15))
                 }
                 
-                //if the edit button not pressed
+                //if the edit button IS pressed
                 else{
                     // Title
                     GenericTitle(title: "Edit below")
@@ -82,11 +82,11 @@ struct ZoomedYarnView: View {
                     
                     // TextFields
                     VStack(spacing: 10) {
-                        GenericSmallTextField(textDesc: "Enter new yarn name", action: $viewModel.yarnName)
+                        GenericSmallTextField(textDesc: item.yarnName, action: $viewModel.yarnName)
                         
-                        GenericSmallTextField(textDesc: "Enter new yarn weight", action: $viewModel.yarnWeight)
+                        GenericSmallTextField(textDesc: item.yarnWeight, action: $viewModel.yarnWeight)
                         
-                        GenericLargeTextField(textDesc: "Enter new yarn description", action: $viewModel.yarnDesc)
+                        GenericLargeTextField(textDesc: item.yarnDesc, action: $viewModel.yarnDesc)
                     }
                     .frame(width: 250)
                     .font(.system(size: 15))
