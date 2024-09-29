@@ -150,6 +150,7 @@ struct ZoomedYarnView: View {
     
     func donePressed() {
         edit = false
+        viewModel.editYarns(yarnID: item.id)
     }
 }
 

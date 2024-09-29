@@ -39,6 +39,7 @@ class Validate{
         return password.count >= 6
     }
 
+    //implement this
     static func passwordHasNumber(password:String) ->Bool{
         return true;
     }

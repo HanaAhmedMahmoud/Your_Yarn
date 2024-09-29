@@ -93,7 +93,7 @@ struct EditYarnView: View {
     
     func editPressed() {
         // Example of edit logic - might involve updating your viewModel
-        viewModel.editYarns()
+        viewModel.editYarns(yarnID: item.id)
         close()
     }
     
